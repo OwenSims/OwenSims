@@ -1,6 +1,10 @@
-This repository contains a selection of the data -- and the data-processing scripts -- behind the projects and blog posts at [owensims.co.uk](http://www.owensims.co.uk).
+## About
 
-I hope you'll use it to check my work and to create stories and visualisations of your own. If you do find it useful, please [let me know](mailto:sims.owen@gmail.com).
+This repository contains a selection of the data -- and the data-processing scripts -- behind the projects and blog posts at [owensims.co.uk](http://www.owensims.co.uk). Most of these scripts are written in [R](https://www.r-project.org/) and [Python](https://www.python.org/).
+
+I hope you'll use it to check my work and to create stories and visualisations of your own. If you do find it useful or want to discuss the work, please [let me know](mailto:sims.owen@gmail.com).
+
+## Dates of data uploads
 
 Blog Date(s) | Title(s) | Folder
 ---|---------|-------------
