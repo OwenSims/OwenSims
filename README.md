@@ -4,7 +4,7 @@ This repository contains a selection of the data -- and the data-processing scri
 
 I hope you'll use this repository to check my work and to create stories and visualisations of your own. If you do find it useful or want to talk about the work, please [let me know](mailto:sims.owen@gmail.com).
 
-## Dates of data uploads
+## Dates of uploads
 
 Blog Date(s) | Title(s) | Folder
 ---|---------|-------------
