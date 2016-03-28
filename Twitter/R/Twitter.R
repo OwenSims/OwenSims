@@ -1,18 +1,9 @@
-rm(list = ls())
+# Install and load up the relevant packages
 
-if(!require(twitteR)) {
-  install.packages("twitteR", repos = "http://cran.ma.imperial.ac.uk/" )
-  library(twitteR)
-} else {
-  library(twitteR)
-}
+packages = c("twitteR", "igraph")
+install.packages(packages, repos = "https://cran.rstudio.com/")
 
-if(!require(igraph)) {
-  install.packages("igraph", repos = "http://cran.ma.imperial.ac.uk/" )
-  library(igraph)
-} else {
-  library(igraph)
-}
+lapply(packages, require, character.only = TRUE)
 
 # Create a Twitter App at https://apps.twitter.com: SuperTwittR
 # Get the authorisation codes and set up Twitter authorisation

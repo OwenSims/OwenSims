@@ -1,6 +1,4 @@
-# Set up the libraries and all that jazz
-
-rm(list = ls())
+# Install and load up the relevant libraries
 
 if(!require(networkD3)) {
   install.packages("networkD3", repos = "http://cran.ma.imperial.ac.uk/" )
