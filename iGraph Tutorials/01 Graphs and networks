@@ -1,0 +1,150 @@
+library(igraph)
+
+g1 <- graph( edges=c(1,2, 2,3), n = 3, directed = FALSE )
+plot(g1) # A simple plot of the network - we'll talk more about plots later
+class(g1)
+g1
+
+# Now with 10 vertices, and directed by default:
+g2 <- graph( edges=c(1,2, 2,3, 3,1, 3,6, 2,8, 1,7), n=10 )
+plot(g2)
+g2
+
+g3 <- graph( c("Owen", "Kyle", "Kyle", "Peter", "Peter", "Owen", "Tom","Owen", "Peter","Tom", "Tom","Kyle")) # named vertices
+# When the edge list has vertex names, the number of nodes is not needed
+plot(g3)
+g3
+
+g4 <- graph( c("Owen", "Kyle", "Kyle", "Peter", "Peter", "Owen", "Tom","Owen", "Peter","Tom", "Tom","Kyle", "Kyle","Rachel", "Peter", "Ashleigh", "Ben", "Ben"),
+isolates=c("Jonny") )
+# In named graphs we can specify isolates by providing a list of their names.
+plot(g4, edge.arrow.size=.5, vertex.color="gold", vertex.size=15,
+vertex.frame.color="gray", vertex.label.color="black",
+vertex.label.cex=0.8, vertex.label.dist=2, edge.curved=0.2)
+
+plot(graph_from_literal(a---b, b---c, c---d, d---e, c---e))
+
+plot(graph_from_literal(a--+b, b+--c, c--+d, d--+e, c+-+e))
+
+plot(graph_from_literal(a:b:c---c:d:e))
+
+plot(graph_from_literal(a:b:c---c:d:e))
+
+gl <- graph_from_literal(a-b-c-d-e-f, a-g-h-b, h-e:f:i, j)
+plot(gl)
+
+
+
+2.2 Edge, vertex, and network attributes
+
+E(g4) # The edges of the object
+
+g4[] # Examining the adjacency matrix
+
+g4[1,]
+
+V(g4)$name # automatically generated when we created the network.
+
+V(g4)$gender <- c("male", "male", "male", "male", "female", "female", "male", "male")
+E(g4)$type <- "email" # Edge attribute, assign "email" to all edges
+E(g4)$weight <- 10 # Edge weight, setting all existing edges to 10
+
+vertex_attr(g4)
+graph_attr(g4)
+
+g4 <- set_graph_attr(g4, "name", "Email Network")
+g4 <- set_graph_attr(g4, "something", "A thing")
+graph_attr_names(g4)
+graph_attr(g4, "name")
+
+graph_attr(g4)
+
+g4 <- delete_graph_attr(g4, "something")
+graph_attr(g4)
+
+
+
+
+plot(g4, edge.arrow.size=.5, vertex.label.color="black", vertex.label.dist=1.5, vertex.color=c( "pink", "skyblue")[1+(V(g4)$gender=="male")] )
+
+g4s <- simplify( g4, remove.multiple = T, remove.loops = F, edge.attr.comb=c(weight="sum", type="ignore") )
+plot(g4s, vertex.label.dist=1.5)
+g4s
+
+
+
+
+
+
+
+
+2.3 Specific graphs and graph models
+
+#Empty graph
+eg <- make_empty_graph(40)
+plot(eg, vertex.size=10, vertex.label=NA)
+
+#Full graph
+fg <- make_full_graph(40)
+plot(fg, vertex.size=10, vertex.label=NA)
+
+#Simple star graph
+st <- make_star(40)
+plot(st, vertex.size=10, vertex.label=NA)
+
+#Tree graph
+tr <- make_tree(40, children = 3, mode = "undirected")
+plot(tr, vertex.size=10, vertex.label=NA)
+
+#Ring graph
+rn <- make_ring(40)
+plot(rn, vertex.size=10, vertex.label=NA)
+
+
+
+
+
+#Erdos-Renyi random graph model
+#(‘n’ is number of nodes, ‘m’ is the number of edges).
+er <- sample_gnm(n=100, m=40) 
+plot(er, vertex.size=6, vertex.label=NA)  
+
+#Watts-Strogatz small-world model
+#Creates a lattice (with dim dimensions and size nodes across dimension) and rewires edges randomly with probability p. The neighborhood in which edges are connected is nei. You can allow loops and multiple edges.
+sw <- sample_smallworld(dim=2, size=10, nei=1, p=0.1)
+plot(sw, vertex.size=6, vertex.label=NA, layout=layout_in_circle)
+
+#Barabasi-Albert preferential attachment model for scale-free graphs
+#(n is number of nodes, power is the power of attachment (1 is linear); m is the number of edges added on each time step)
+ba <-  sample_pa(n=100, power=1, m=1,  directed=F)
+plot(ba, vertex.size=6, vertex.label=NA)
+
+#igraph can also give you some notable historical graphs. For instance:
+zach <- graph("Zachary") # the Zachary carate club
+plot(zach, vertex.size=10, vertex.label=NA)
+
+
+
+
+
+
+
+#Rewiring a graph
+#each_edge() is a rewiring method that changes the edge endpoints uniformly randomly with a probability prob.
+rn.rewired <- rewire(rn, each_edge(prob=0.1))
+plot(rn.rewired, vertex.size=10, vertex.label=NA)
+
+#Rewire to connect vertices to other vertices at a certain distance.
+rn.neigh = connect.neighborhood(rn, 5)
+plot(rn.neigh, vertex.size=8, vertex.label=NA) 
+
+#Combine graphs (disjoint union, assuming separate vertex sets): %du%
+plot(rn, vertex.size=10, vertex.label=NA) 
+
+plot(tr, vertex.size=10, vertex.label=NA) 
+
+plot(rn %du% tr, vertex.size=10, vertex.label=NA) 
+
+
+
+plot(ba, edge.color="orange", vertex.color="gray50") 

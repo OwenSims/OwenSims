@@ -1,0 +1,20 @@
+N = unique(D);
+
+for i = 1:size(N,1)
+	U(i,1) = i;
+end
+
+U
+
+for i = 1:size(N,1)
+	for j = 1:size(D,1)
+		if D(j,1) == N(i,1)
+			D(j,1) = U(i,1);
+		end
+		if D(j,2) == N(i,1)
+			D(j,2) = U(i,1);
+		end
+	end
+end
+
+D

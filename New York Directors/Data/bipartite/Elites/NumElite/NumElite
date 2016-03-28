@@ -1,0 +1,22 @@
+% Find the number of elites in each of the affilitions (firms)
+
+% Input 1: List of elites (E)
+% Input 2: Edge list of bipartite network (D)
+
+M = unique(D(:,1));
+M(size(M,1),2) = 0;
+
+for i = 1:size(D,1)
+	for j = 1:size(E,1)
+		for k = 1:size(M,1)
+			if  D(i,2) == E(j,1)
+				if  D(i,1) == M(k,1)
+					M(k,2) = M(k,2) + 1;
+				end
+			end
+		end
+	end
+end
+
+
+
