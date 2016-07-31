@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 JUL 2016 16:04
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 JUL 2016 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -770,18 +770,25 @@ or  <return>  to continue without it.
 \openout4 = `00WealthOfNetworks.idx'.
 
 Writing index file 00WealthOfNetworks.idx
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.aux
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/01Introduction.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/02TowardARelationalPerspec
-tive.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/03GrowthDevelopmentSocioEc
-onomicSpace.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/04Entrepreneurship.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/05MiddlemenAsEntrepreneurs
-.aux) (/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/06BlockFormation.aux
-)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/07ControlInHypergraphs.aux
-) (/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/08NYCControl.aux))
+
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.aux
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/01Introduction.
+aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/02TowardARelati
+onalPerspective.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/03GrowthDevelop
+mentSocioEconomicSpace.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/04Entrepreneurs
+hip.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/05MiddlemenAsEn
+trepreneurs.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/06BlockFormatio
+n.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/07ControlInHype
+rgraphs.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/08NYCControl.au
+x))
 \openout1 = `00WealthOfNetworks.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 126.
@@ -798,8 +805,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 126.
 LaTeX Font Info:    ... okay on input line 126.
-
-(/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count158
 \scratchdimen=\dimen203
@@ -827,8 +833,10 @@ LaTeX Info: Redefining \ref on input line 126.
 LaTeX Info: Redefining \pageref on input line 126.
 LaTeX Info: Redefining \nameref on input line 126.
 
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.out)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.out)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.out)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.out)
 \@outlinefile=\write5
 \openout5 = `00WealthOfNetworks.out'.
 
@@ -877,10 +885,10 @@ Package pdftex.def Info: imgs/qublogo2.png used on input line 153.
 qublogo2.png>] [2] [3
 
 ]
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.toc
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 3.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
 (/usr/local/texlive/2012/texmf-dist/tex/latex/microtype/mt-msa.cfg
@@ -938,8 +946,9 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[4] (/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.lof
-
+[4]
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.lof
 Underfull \vbox (badness 1189) has occurred while \output is active []
 
  [5
@@ -1671,7 +1680,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 File: imgs/structure-space.png Graphic file (type png)
 
 <use imgs/structure-space.png>
-Package pdftex.def Info: imgs/structure-space.png used on input line 49.
+Package pdftex.def Info: imgs/structure-space.png used on input line 44.
 (pdftex.def)             Requested size: 289.07928pt x 266.99684pt.
 
 
@@ -1685,7 +1694,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.55 
+l.50 
       <./imgs/structure-space.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -1957,10 +1966,10 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[122] <imgs/Sim1E.png, id=2419, 1027.84pt x 1027.84pt>
+[122] <imgs/Sim1E.png, id=2422, 1027.84pt x 1027.84pt>
 File: imgs/Sim1E.png Graphic file (type png)
  <use imgs/Sim1E.png>
-Package pdftex.def Info: imgs/Sim1E.png used on input line 651.
+Package pdftex.def Info: imgs/Sim1E.png used on input line 646.
 (pdftex.def)             Requested size: 226.12549pt x 226.12549pt.
 
 
@@ -1974,18 +1983,18 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.659 
-       <./imgs/Sim1E.png>] <imgs/Sim2E.png, id=2431, 1027.84pt x 1027.84pt>
+l.654 
+       <./imgs/Sim1E.png>] <imgs/Sim2E.png, id=2434, 1027.84pt x 1027.84pt>
 File: imgs/Sim2E.png Graphic file (type png)
 
 <use imgs/Sim2E.png>
-Package pdftex.def Info: imgs/Sim2E.png used on input line 662.
+Package pdftex.def Info: imgs/Sim2E.png used on input line 657.
 (pdftex.def)             Requested size: 226.12549pt x 226.12549pt.
- <imgs/Sim3E.png, id=2433, 1027.84pt x 1027.84pt>
+ <imgs/Sim3E.png, id=2436, 1027.84pt x 1027.84pt>
 File: imgs/Sim3E.png Graphic file (type png)
 
 <use imgs/Sim3E.png>
-Package pdftex.def Info: imgs/Sim3E.png used on input line 677.
+Package pdftex.def Info: imgs/Sim3E.png used on input line 672.
 (pdftex.def)             Requested size: 226.12549pt x 226.12549pt.
 
 
@@ -1999,12 +2008,12 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.685 
-       <./imgs/Sim2E.png>] <imgs/Sim1C.png, id=2447, 1027.84pt x 1027.84pt>
+l.680 
+       <./imgs/Sim2E.png>] <imgs/Sim1C.png, id=2450, 1027.84pt x 1027.84pt>
 File: imgs/Sim1C.png Graphic file (type png)
 
 <use imgs/Sim1C.png>
-Package pdftex.def Info: imgs/Sim1C.png used on input line 701.
+Package pdftex.def Info: imgs/Sim1C.png used on input line 696.
 (pdftex.def)             Requested size: 226.12549pt x 226.12549pt.
 
 
@@ -2018,7 +2027,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.707 
+l.702 
        <./imgs/Sim3E.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -2031,12 +2040,12 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.713 
-       <./imgs/Sim1C.png>] <imgs/Sim3C.png, id=2464, 1027.84pt x 1027.84pt>
+l.708 
+       <./imgs/Sim1C.png>] <imgs/Sim3C.png, id=2467, 1027.84pt x 1027.84pt>
 File: imgs/Sim3C.png Graphic file (type png)
 
 <use imgs/Sim3C.png>
-Package pdftex.def Info: imgs/Sim3C.png used on input line 716.
+Package pdftex.def Info: imgs/Sim3C.png used on input line 711.
 (pdftex.def)             Requested size: 226.12549pt x 226.12549pt.
 
 
@@ -2050,7 +2059,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.727 
+l.722 
        <./imgs/Sim3C.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2169,11 +2178,11 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[141] <imgs/networkbridge.png, id=2652, 533.8344pt x 249.0906pt>
+[141] <imgs/networkbridge.png, id=2655, 533.8344pt x 249.0906pt>
 File: imgs/networkbridge.png Graphic file (type png)
 
 <use imgs/networkbridge.png>
-Package pdftex.def Info: imgs/networkbridge.png used on input line 101.
+Package pdftex.def Info: imgs/networkbridge.png used on input line 102.
 (pdftex.def)             Requested size: 363.31941pt x 169.53139pt.
 
 
@@ -2200,7 +2209,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.113 
+l.114 
        <./imgs/networkbridge.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -2297,11 +2306,11 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[155] <imgs/botticelli.jpg, id=2770, 1089.31969pt x 1505.625pt>
+[155] <imgs/botticelli.jpg, id=2773, 1089.31969pt x 1505.625pt>
 File: imgs/botticelli.jpg Graphic file (type jpg)
 
 <use imgs/botticelli.jpg>
-Package pdftex.def Info: imgs/botticelli.jpg used on input line 214.
+Package pdftex.def Info: imgs/botticelli.jpg used on input line 215.
 (pdftex.def)             Requested size: 364.49635pt x 503.79593pt.
 
 
@@ -2332,13 +2341,13 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.228 
+l.229 
        <./imgs/botticelli.jpg>]
-<imgs/allnetworks.png, id=2779, 1027.84pt x 2071.74pt>
+<imgs/allnetworks.png, id=2782, 1027.84pt x 2071.74pt>
 File: imgs/allnetworks.png Graphic file (type png)
 
 <use imgs/allnetworks.png>
-Package pdftex.def Info: imgs/allnetworks.png used on input line 235.
+Package pdftex.def Info: imgs/allnetworks.png used on input line 236.
 (pdftex.def)             Requested size: 299.93231pt x 604.55107pt.
 
 
@@ -2369,7 +2378,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.241 
+l.242 
        <./imgs/allnetworks.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2643,7 +2652,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[191] <imgs/Florentine-marr.png, id=3161, 1027.84pt x 1027.84pt>
+[191] <imgs/Florentine-marr.png, id=3164, 1027.84pt x 1027.84pt>
 File: imgs/Florentine-marr.png Graphic file (type png)
 
 <use imgs/Florentine-marr.png>
@@ -2758,7 +2767,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[197] <imgs/krack.png, id=3241, 554.82281pt x 557.08125pt>
+[197] <imgs/krack.png, id=3244, 554.82281pt x 557.08125pt>
 File: imgs/krack.png Graphic file (type png)
 
 <use imgs/krack.png>
@@ -2827,7 +2836,7 @@ Overfull \hbox (1.99117pt too wide) in paragraph at lines 926--966
  [][][] 
  []
 
-<imgs/Florentine-modu.png, id=3267, 823.075pt x 588.1975pt>
+<imgs/Florentine-modu.png, id=3270, 823.075pt x 588.1975pt>
 File: imgs/Florentine-modu.png Graphic file (type png)
 
 <use imgs/Florentine-modu.png>
@@ -2854,7 +2863,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.201 \include{05MiddlemenAsEntrepreneurs}
+l.203 \include{05MiddlemenAsEntrepreneurs}
                                            <./imgs/Florentine-modu.png>]
 \openout2 = `06BlockFormation.aux'.
 
@@ -3156,13 +3165,13 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[234] <imgs/T1999-01.png, id=3674, 1024.82875pt x 632.3625pt>
+[234] <imgs/T1999-01.png, id=3677, 1024.82875pt x 632.3625pt>
 File: imgs/T1999-01.png Graphic file (type png)
 
 <use imgs/T1999-01.png>
 Package pdftex.def Info: imgs/T1999-01.png used on input line 801.
 (pdftex.def)             Requested size: 409.92424pt x 252.94052pt.
- <imgs/T2000-12.png, id=3675, 1014.79124pt x 694.595pt>
+ <imgs/T2000-12.png, id=3678, 1014.79124pt x 694.595pt>
 File: imgs/T2000-12.png Graphic file (type png)
 
 <use imgs/T2000-12.png>
@@ -3172,7 +3181,7 @@ Package pdftex.def Info: imgs/T2000-12.png used on input line 809.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imgs/T2001-05.png, id=3676, 1015.795pt x 641.39626pt>
+<imgs/T2001-05.png, id=3679, 1015.795pt x 641.39626pt>
 File: imgs/T2001-05.png Graphic file (type png)
  <use imgs/T2001-05.png>
 Package pdftex.def Info: imgs/T2001-05.png used on input line 817.
@@ -3181,7 +3190,7 @@ Package pdftex.def Info: imgs/T2001-05.png used on input line 817.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<imgs/T2001-08.png, id=3677, 1010.77625pt x 612.2875pt>
+<imgs/T2001-08.png, id=3680, 1010.77625pt x 612.2875pt>
 File: imgs/T2001-08.png Graphic file (type png)
 
 <use imgs/T2001-08.png>
@@ -3223,13 +3232,13 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.202 \include{06BlockFormation}
+l.204 \include{06BlockFormation}
                                 pdfTeX warning (ext4): destination with the sam
 e identifier (name{figure.3.6.A.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.202 \include{06BlockFormation}
+l.204 \include{06BlockFormation}
                                  <./imgs/T2000-12.png> <./imgs/T2001-05.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -3242,7 +3251,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.202 \include{06BlockFormation}
+l.204 \include{06BlockFormation}
                                  <./imgs/T2001-08.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -3336,7 +3345,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[250] <imgs/hypergraph.png, id=3893, 1278.7775pt x 781.92125pt>
+[250] <imgs/hypergraph.png, id=3896, 1278.7775pt x 781.92125pt>
 File: imgs/hypergraph.png Graphic file (type png)
 
 <use imgs/hypergraph.png>
@@ -3530,7 +3539,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[268] <imgs/Institutions.png, id=4086, 968.61874pt x 937.5025pt>
+[268] <imgs/Institutions.png, id=4089, 968.61874pt x 937.5025pt>
 File: imgs/Institutions.png Graphic file (type png)
 
 <use imgs/Institutions.png>
@@ -3576,7 +3585,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[272] <imgs/Elite.png, id=4119, 1027.84pt x 1027.84pt>
+[272] <imgs/Elite.png, id=4122, 1027.84pt x 1027.84pt>
 File: imgs/Elite.png Graphic file (type png)
  <use imgs/Elite.png>
 Package pdftex.def Info: imgs/Elite.png used on input line 135.
@@ -3638,7 +3647,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[278] <imgs/firm-type2.png, id=4162, 640.3925pt x 536.0025pt>
+[278] <imgs/firm-type2.png, id=4165, 640.3925pt x 536.0025pt>
 File: imgs/firm-type2.png Graphic file (type png)
 
 <use imgs/firm-type2.png>
@@ -3731,7 +3740,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[289] <imgs/RandSim1.png, id=4252, 779.91376pt x 918.43124pt>
+[289] <imgs/RandSim1.png, id=4255, 779.91376pt x 918.43124pt>
 File: imgs/RandSim1.png Graphic file (type png)
 
 <use imgs/RandSim1.png>
@@ -3835,7 +3844,8 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [299]
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.bbl
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.bbl
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
  Make it at least 13.59999pt.
@@ -3977,7 +3987,7 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [319])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 213.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 215.
 
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
@@ -3986,33 +3996,39 @@ Package Fancyhdr Warning: \headheight is too small (12.5pt):
  This may cause the page layout to be inconsistent, however.
 
 [320]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 213.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 215.
 
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00WealthOfNetworks.aux
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/01Introduction.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/02TowardARelationalPerspec
-tive.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/03GrowthDevelopmentSocioEc
-onomicSpace.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/04Entrepreneurship.aux)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/05MiddlemenAsEntrepreneurs
-.aux) (/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/06BlockFormation.aux
-)
-(/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/07ControlInHypergraphs.aux
-) (/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/08NYCControl.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 213.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 213.
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/00WealthOfNetwo
+rks.aux
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/01Introduction.
+aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/02TowardARelati
+onalPerspective.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/03GrowthDevelop
+mentSocioEconomicSpace.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/04Entrepreneurs
+hip.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/05MiddlemenAsEn
+trepreneurs.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/06BlockFormatio
+n.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/07ControlInHype
+rgraphs.aux)
+(/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadtmp/08NYCControl.au
+x))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 215.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 215.
 Package rerunfilecheck Info: File `00WealthOfNetworks.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 213.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 215.
  ) 
 Here is how much of TeX's memory you used:
  22271 strings out of 493488
- 382179 string characters out of 3141326
+ 382718 string characters out of 3141326
  539434 words of memory out of 3000000
  23374 multiletter control sequences out of 15000+200000
  40521 words of font info for 230 fonts, out of 3000000 for 9000
@@ -4055,11 +4071,11 @@ fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2012/texmf-dist/fo
 nts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive/2012/texmf-dist/font
 s/type1/public/cm-super/sfti0900.pfb></usr/local/texlive/2012/texmf-dist/fonts/
 type1/public/cm-super/sfti1095.pfb>
-Output written on "/Users/oMac/Desktop/PhD Thesis/PhDThesis/.texpadtmp/00Wealth
-OfNetworks.pdf" (330 pages, 6795426 bytes).
+Output written on "/Users/oMac/Desktop/OwenSims/The Wealth of Networks/.texpadt
+mp/00WealthOfNetworks.pdf" (330 pages, 6795715 bytes).
 PDF statistics:
- 4837 PDF objects out of 5155 (max. 8388607)
- 4382 compressed objects within 44 object streams
+ 4840 PDF objects out of 5155 (max. 8388607)
+ 4385 compressed objects within 44 object streams
  1405 named destinations out of 1440 (max. 500000)
  28787 words of extra memory for PDF output out of 29859 (max. 10000000)
 
