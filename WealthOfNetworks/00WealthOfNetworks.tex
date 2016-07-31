@@ -1,0 +1,213 @@
+\documentclass[11pt,fleqn]{book}
+
+\usepackage{shorttoc}
+\usepackage{makeidx,natbib,vmargin,setspace}
+\usepackage{tabu}
+
+\usepackage{color}
+\usepackage{framed}
+
+\usepackage{amsfonts}
+\usepackage{amssymb, amsthm}
+
+%\usepackage{txfonts, mathtools}
+%\usepackage{libertine}
+\usepackage[T1]{fontenc}
+
+%\usepackage[T1]{fontenc}
+%\usepackage{stix}
+
+\usepackage[colorlinks=true, pdfstartview=FitV, citecolor=blue!50!black, linkcolor=red!30!black]{hyperref}
+
+\usepackage{graphicx,graphics,tikz}
+\usepackage{microtype}
+%\usepackage{url}
+
+\usepackage{eqnarray}
+\usepackage{rotating}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{dcolumn}
+
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\restylefloat{table}
+\usepackage[section]{placeins}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{}
+\fancyhead[LE,RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt}
+\setlength{\footskip}{0in}
+\renewcommand{\footruleskip}{0pt}
+\fancypagestyle{plain}{%
+\fancyhead{}
+\renewcommand{\headrulewidth}{0pt}
+}
+\parskip 0.05in
+
+\usepackage{appendix}
+\usepackage{chngcntr}
+\usepackage{etoolbox}
+
+\AtBeginEnvironment{subappendices}{%
+\chapter*{Appendix for Chapter~\thechapter}
+\addcontentsline{toc}{chapter}{Appendices}
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
+}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+
+\newcounter{llst}
+\newenvironment{abet}{\begin{list}{\rm (\alph{llst})}{\usecounter{llst}
+\setlength{\itemindent}{0em} \setlength{\leftmargin}{3em}
+\setlength{\labelwidth}{2em} \setlength{\labelsep}{1em}}}{\end{list}}
+\newenvironment{numm}{\begin{list}{\rm (\roman{llst})}{\usecounter{llst}
+\setlength{\itemindent}{0em} \setlength{\leftmargin}{3.5em}
+\setlength{\labelwidth}{2.5em} \setlength{\labelsep}{1em}}}{\end{list}}
+
+\renewcommand{\baselinestretch}{1.25}
+
+\newtheorem{thm}{Theorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{expl}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{property}[theorem]{Properties}
+\newtheorem{rmrk}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent \textbf{#1.} }{\hfill
+\rule{0.5em}{0.5em}}
+
+\newenvironment{example}{\begin{expl} \rm}{\hfill $\blacklozenge$ \end{expl}}{}
+\newenvironment{remark}{\begin{rmrk} \rm}{\hfill $\blacklozenge$ \end{rmrk}}{}
+
+%\setpapersize{A4}
+% \setmarginsrb{84pt}{64pt}{84pt}{72pt}{12pt}{10pt}{12pt}{30pt}
+
+\makeindex
+
+\begin{document}
+
+\pagenumbering{roman}
+\begin{titlepage}
+    \begin{center}
+        \vspace*{1cm}
+        
+        \huge
+        \textbf{The Wealth of Networks}
+        
+        \vspace{0.5cm}
+        \LARGE
+        Entrepreneurship and the Entrepreneurial Function in Socially Structured Economies
+        
+        \vspace{1.5cm}
+        
+        \Large
+        \textbf{Owen Sims}
+        
+        \vfill
+        
+        \large
+        A thesis presented for the degree of\\
+        Doctor of Philosophy
+        
+        \vspace{0.8cm}
+        
+        \includegraphics[width=0.15\textwidth]{imgs/qublogo2.png}
+        
+        \large
+        Queen's Management School\\
+        Queen's University Belfast\\
+        \today
+        
+    \end{center}
+\end{titlepage}
+
+\vspace*{\stretch{3}}
+
+\thispagestyle{empty}
+
+\newpage
+
+\chapter*{Acknowledgements}
+
+The research presented in this monograph has been financially supported by the Department of Learning and Employment (DEL) Northern Ireland. I gratefully acknowledge and appreciate this financial support from DEL and the possibilities to participate in presentations and conferences that Queen's University Belfast has given me for the last four years.
+
+This research has been conducted in the Economics Department of Queen's Management School at Queen's University Belfast, Northern Ireland. I am thankful for all the many beneficial and encouraging discussions with members of our group over my academic career. Importantly, I would like to thank my supervisor Robert Gilles whose creative ideas and love for the discipline inspired me throughout the Masters and PhD process. He gave me much guidance and encouragement as both a mentor and friend throughout the years.
+
+
+
+\newpage
+
+\setcounter{page}{1} \pagenumbering{roman}
+
+\begin{singlespace}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\listoffigures
+
+\chapter*{Abstract}
+
+\addcontentsline{toc}{chapter}{Abstract}
+
+Many academic economists and practitioners have recognised the need for a pragmatic reform of the economics discipline, particularly since the effects of the 2008 global financial crisis \citep{Hodgson2009}. Further, many also recognise the need for a cohesive perspective on issues regarding the entrepreneur and entrepreneurship within both the micro- and macroeconomy. This monograph addresses---and thus provides a partial resolve---to both issues. In doing so the monograph provides an insight into a \emph{relational perspective} of the economy through the evolution of the division of labour propagated by the actions of entrepreneurs. Of specific interest is the emergence of new specialisations, institutional modification, and the exploitation of positional power by entrepreneurial leaders.
+
+\end{singlespace}
+
+\newpage
+
+\include{01Introduction}
+\include{02TowardARelationalPerspective}
+\include{03GrowthDevelopmentSocioEconomicSpace}
+\include{04Entrepreneurship}
+\include{05MiddlemenAsEntrepreneurs}
+\include{06BlockFormation}
+\include{07ControlInHypergraphs}
+\include{08NYCControl}
+
+\singlespace
+
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibliographystyle{harvard}
+\bibliography{OSDB}
+
+\end{document}
