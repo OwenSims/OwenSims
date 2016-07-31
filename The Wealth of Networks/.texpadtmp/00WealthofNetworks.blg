@@ -2,11 +2,14 @@ This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: 00WealthOfNetworks.aux
 A level-1 auxiliary file: 01Introduction.aux
+A level-1 auxiliary file: Part1.aux
 A level-1 auxiliary file: 02TowardARelationalPerspective.aux
 A level-1 auxiliary file: 03GrowthDevelopmentSocioEconomicSpace.aux
 A level-1 auxiliary file: 04Entrepreneurship.aux
+A level-1 auxiliary file: Part2.aux
 A level-1 auxiliary file: 05MiddlemenAsEntrepreneurs.aux
 A level-1 auxiliary file: 06BlockFormation.aux
+A level-1 auxiliary file: Part3.aux
 A level-1 auxiliary file: 07ControlInHypergraphs.aux
 A level-1 auxiliary file: 08NYCControl.aux
 The style file: ../harvard.bst
@@ -303,7 +306,7 @@ while executing---line 1252 of file ../harvard.bst
 Warning--empty note in Padgett1994
 You've used 378 entries,
             2330 wiz_defined-function locations,
-            2723 strings with 54044 characters,
+            2726 strings with 54071 characters,
 and the built_in function-call counts, 169266 in all, are:
 = -- 17956
 > -- 6439
