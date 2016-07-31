@@ -24,9 +24,9 @@
 \contentsline {subsubsection}{Fundamental axioms and principles of traditional economic modelling}{27}{section*.14}
 \contentsline {subsubsection}{Human rationality in economic theory}{28}{section*.15}
 \contentsline {subsubsection}{New Institutional Economics and the economic agent}{29}{section*.16}
-\contentsline {subsection}{\numberline {2.1.2}An evolutionary perspective of the social actor}{30}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.2}An evolutionary perspective of the social actor}{29}{subsection.2.1.2}
 \contentsline {subsubsection}{The social brain}{30}{section*.17}
-\contentsline {subsubsection}{Dunbar's number}{32}{section*.18}
+\contentsline {subsubsection}{Dunbar's number}{31}{section*.18}
 \contentsline {subsubsection}{Cognitive limitations}{33}{section*.19}
 \contentsline {subsection}{\numberline {2.1.3}Defining the social actor}{34}{subsection.2.1.3}
 \contentsline {section}{\numberline {2.2}Economic agents as consumer-producers}{34}{section.2.2}
@@ -62,7 +62,7 @@
 \contentsline {subsection}{\numberline {2.A.1}Autarky}{69}{subsection.1.2.A.1}
 \contentsline {subsubsection}{Autarky problem}{70}{section*.37}
 \contentsline {section}{\numberline {2.B}Trust}{71}{section.1.2.B}
-\contentsline {subsubsection}{Oxytocin}{71}{section*.38}
+\contentsline {subsubsection}{The role of neuroeconomics}{71}{section*.38}
 \contentsline {subsubsection}{The trust hypothesis}{73}{section*.39}
 \contentsline {subsection}{\numberline {2.B.1}Trust as the dual of embeddedness}{74}{subsection.1.2.B.1}
 \contentsline {subsubsection}{Trust and trustworthiness}{76}{section*.40}
@@ -89,7 +89,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Representative economic states}{97}{subsection.3.2.2}
 \contentsline {subsubsection}{The Platonian economy}{97}{section*.54}
 \contentsline {subsubsection}{The incorporated economy}{100}{section*.55}
-\contentsline {subsubsection}{The platform economy}{101}{section*.56}
+\contentsline {subsubsection}{The Platform economy}{101}{section*.56}
 \contentsline {section}{\numberline {3.3}Growth, development, and the entrepreneur}{103}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Distinguishing growth and development}{103}{subsection.3.3.1}
 \contentsline {subsubsection}{Decline, regression, and The Edge of Chaos}{104}{section*.57}
