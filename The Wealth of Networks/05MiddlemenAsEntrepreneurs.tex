@@ -131,21 +131,21 @@ The following properties can be deduced directly from the above definition.
 
 \begin{proposition}\label{TheoremIntermediary}
 Let $D$ be a directed network on the node set $N = \{ 1, \ldots ,n \}$.
-\begin{numm}
-\item Every middleman $i \in M(D)$ is an intermediary in $D$. 
+\begin{itemize}
+\item[(i)] Every middleman $i \in M(D)$ is an intermediary in $D$. 
 
-\item If $n < 3$, there might exist intermediaries, but there are no middlemen.
+\item[(ii)] If $n < 3$, there might exist intermediaries, but there are no middlemen.
 
-\item For $n \geqslant 3$ and $i \in N$, $p_{i}(D) \subset \left[ p_{j}(D) \cup \{ j \} \, \right]$ for every direct successor $j \in s_{i}(D)$ implies that $i \notin M(D)$.
+\item[(iii)] For $n \geqslant 3$ and $i \in N$, $p_{i}(D) \subset \left[ p_{j}(D) \cup \{ j \} \, \right]$ for every direct successor $j \in s_{i}(D)$ implies that $i \notin M(D)$.
 
-\item For all $i,j \in N$ with $j \in s_{i}(D)$ it holds that $M_{i,j}(D) = \varnothing$.
+\item[(iv)] For all $i,j \in N$ with $j \in s_{i}(D)$ it holds that $M_{i,j}(D) = \varnothing$.
 \\
 This implies that the complete directed network has no middlemen.
 
-\item Every middleman $i \in M(D)$ has a local clustering co-efficient of less than $1$.
+\item[(v)] Every middleman $i \in M(D)$ has a local clustering co-efficient of less than $1$.
 
-\item If $D$ is undirected in the sense that $(i,j) \in D$ if and only if $(j,i) \in D$, then $M_{ij} (D) = M_{ji} (D)$ for all $i,j \in N$.
-\end{numm}
+\item[(vi)] If $D$ is undirected in the sense that $(i,j) \in D$ if and only if $(j,i) \in D$, then $M_{ij} (D) = M_{ji} (D)$ for all $i,j \in N$.
+\end{itemize}
 \end{proposition}
 
 From (vi), in an undirected network a node is a middleman if it rests on all walks from node $i$ to node $j$. This means that the removal of a middleman disrupts the any communication between nodes $j$ and $i$. Hence, a middleman indeed is a singleton cut set in an undirected network, as traditionally understood.
@@ -326,11 +326,11 @@ Examples~\ref{Simple Contestability} and~\ref{Group Contestability} give an indi
 Our main result states that there is a duality between contestation and the presence of critical nodes.
 \begin{theorem}[Duality of middlemen and contestability] \label{duality}
 Consider any directed network $(N,D)$ with $n \geqslant 3$. Then:
-\begin{numm}
-\item Every middleman $i \in M(D)$ is uncontested.
+\begin{itemize}
+\item[(i)] Every middleman $i \in M(D)$ is uncontested.
 
-\item If an intermediary $i \in N$ is uncontested, then it must be a middleman, i.e., $i \in M(D)$.
-\end{numm}
+\item[(ii)] If an intermediary $i \in N$ is uncontested, then it must be a middleman, i.e., $i \in M(D)$.
+\end{itemize}
 \end{theorem}
 \begin{proof}
 Let $(N,D)$ be a directed network with $n \geqslant 3$.
@@ -638,7 +638,7 @@ Let $D$ be some connected network on the node set $N$. Then the following proper
 
 The notion of a threshold set forms the basis of a simple index that measures the power of a node in a network. This power index indicates how many competitors a node has in a given network.
 
-\subsection{Network Thickness}
+\subsection{Network thickness}
 
 Above we introduced an index that reflects how many competitors a certain individual has within a network. The fewer competitors, the more power an individual has. The smallest threshold set of an individual $i \in N$ in a network $D$ is that case that $\{i\} \in T_{i}^{\star}(D)$. This corresponds to the case where $i$ is a middleman in the network $D$.
 
@@ -891,20 +891,32 @@ Manager       & $d^-_i$ $\left(d^+_i\right)$& $E_i$    & $BC_i$   & $\nu_i$  & $
 
 In Table 4, using the same centrality measures as before, we identify two weak middlemen, managers 4 and 15, and one strong middleman, manager 21\footnote{As before, (*) indicates a weak middleman and (**) indicates a strong middleman.}. Middlemen are important for this network for a number of intuitive reasons: First, a middleman can block ideas, advice, and information from being transmitted from one group of managers to another. Second, a middleman can manipulate the information transferred from one group of managers to another.
 
-The weak middleman, Node 15, has the highest brokerage in the organisation controlling a total of 34 relationships. This is also reflected in that \citet{Krackhardt1987} highlighted manager 15 as an important agent in the organisational advice network. However, Node 15 does not have the highest betweenness or Bonacich centralities. Instead, Node 18 is the most prominent in terms of Bonacich and betweenness scores but is not a middleman in the network; instead this may be a function of the in- and out-degree of node 18.
+The weak middleman, manager (node) 15, has the highest brokerage in the organisation controlling a total of 34 relationships. This is also reflected in that \citet{Krackhardt1987} highlighted manager 15 as an important agent in the organisational advice network. However, Node 15 does not have the highest betweenness or Bonacich centralities. Instead, Node 18 is the most prominent in terms of Bonacich and betweenness scores but is not a middleman in the network; instead this may be a function of the in- and out-degree of node 18.
 
 Both Bonacich and betweenness centralities are also seen to be poor indicators for ranking middlemen: Node 15 is the most powerful middleman in the network, but has a Bonacich and betweenness centrality lower than Node 21. The Bonacich influence model does not consider the fact that middlemen are potentially able to exploit their position by using information from others and blocking the transmission of certain information and ideas.
 
 \subsubsection{Concluding comments}
 
-Due to the formation of new socio-economic roles entrepreneurial agents can assume unique positions in a network. These unique positions can intuitively be seen with respect to their connectivity in the socio-economic space and can be defined accurately as middleman positions. Positioning oneself in a unique way in the socio-economic space is the essence of a network entrepreneur as discussed in chapter~\ref{ch:entrepreneurship}. Middlemen possess an ability to connect pairs of agents who would otherwise be disconnected from each other; these can have liberating externalities for those directly or indirectly connected to middlemen in the form of opening new exchange routes and channels of information, but middlemen can exploit their position and as such act in a highly extractive way to their neighbourhood. Whether a middleman behaves in an exploitive or facilitating manner is ambiguous and not covered here, however the middleman power measure provides a mechanism in which to measure the positional power of the middleman and therefore provides a quantitative value to the potentially extractive nature of the agent.
+Due to the formation of new socio-economic roles entrepreneurial agents can assume unique positions in a network. These unique positions can intuitively be seen with respect to their connectivity in the socio-economic space and can be defined accurately as middleman positions. Positioning oneself in a unique way in the socio-economic space is the essence of a network entrepreneur as discussed in Chapter~\ref{ch:entrepreneurship}. 
+
+Middlemen possess an ability to connect pairs of agents who would otherwise be disconnected from each other; these can have liberating externalities for those directly or indirectly connected to middlemen in the form of opening new exchange routes and channels of information, but middlemen can exploit their position and as such act in a highly extractive way to their neighbourhood. Whether a middleman behaves in an exploitive or facilitating manner is ambiguous and dependent on the institutional environment; however the middleman power measure provides a mechanism in which to measure the positional power of the middleman and therefore provides an objective quantitative value to the potentially extractive or value-generating nature of the entrepreneurial agent.
 
 The assessment of middlemen is purely individualised. We can extend the assessment to collective economic interaction and thus cooperative economic activities to include coalitions of economic agents who as a whole form a middleman position in a network.
 
 
 \begin{subappendices}
 
-\section{Power and centrality tables for Renaissance Florence networks} \label{A}
+\section{Power and centrality in Renaissance Florence networks} 
+\label{A}
+
+This chapter analysed the network structure and node centrality of elite Florentine marriages. Here we provide more information as to the modularity of the network (Figure~\ref{Fig:Florentinemodu}) and centrality of nodes within the network (Table~\ref{tabFlorenceA}).
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4]{imgs/Florentine-modu.png}
+\caption{Community structure detection on elite Florentine marriages}
+\label{Fig:Florentinemodu}
+\end{figure}
 
 \begin{table}
 \begin{center}
@@ -950,14 +962,5 @@ Velluti         & 28,108  & 0(0) & 0.000 & 0.000 & 0.000      \\ \hline
 \label{tabFlorenceA}
 \end{center}
 \end{table}
-
-
-
-\begin{figure}[t]
-\centering
-\includegraphics[scale=0.4]{imgs/Florentine-modu.png}
-\caption{Community structure detection on elite Florentine marriages}
-\label{Fig:Florentinemodu}
-\end{figure}
 
 \end{subappendices}

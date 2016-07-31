@@ -144,20 +144,20 @@ Finally, we mention that connected nodes can form a critical set. Indeed, $B_3 =
 A number of characteristics can be derived for critical sets in a directed network. We state the next properties without proof.
 \begin{property} \label{prop:blocks}
 Let $D$ be a network on node set $N$ and let $i,j \in N$ with $i \neq j$.
-\begin{numm}
-\item A node $h \in N$ is a $ij$--critical node in $D$ if and only if
+\begin{itemize}
+\item[(i)] A node $h \in N$ is a $ij$--critical node in $D$ if and only if
 \[
 h \in \left[ \, \cap \mathcal{W}_{ij} (D) \, \right] \setminus \{i,j\} .
 \]
 
-\item The critical collection $\mathcal{B} (D)$ on network $D$ has properties similar to a \emph{filter} on the set of intermediaries $M_D \subset N$ in the sense that if $B \subset M_D \setminus \{ i,j \}$ is an $ij$--critical set in $D$, then any $B' \subset N$ with $B \subset B' \subset M_D \setminus \{ i,j \}$ is an $ij$--critical set in $D$.
+\item[(ii)] The critical collection $\mathcal{B} (D)$ on network $D$ has properties similar to a \emph{filter} on the set of intermediaries $M_D \subset N$ in the sense that if $B \subset M_D \setminus \{ i,j \}$ is an $ij$--critical set in $D$, then any $B' \subset N$ with $B \subset B' \subset M_D \setminus \{ i,j \}$ is an $ij$--critical set in $D$.
 
-\item Critical sets can be defined in terms of their connectivity role in the network:
+\item[(iii)] Critical sets can be defined in terms of their connectivity role in the network:
 \\
 If $B \subset N$ is an $ij$--critical set, then it holds that $\mathcal{W}_{ij}(D) \neq \varnothing$ and $\mathcal{W}_{ij}(D - B) = \varnothing$.
 
-\item Let $h \in N$ be an $ij$--critical node and $B \subset N$ such that $h \in B$. Then, $B$ is an $ij$--critical set if and only if $i,j \notin B$.
-\end{numm}
+\item[(iv)] Let $h \in N$ be an $ij$--critical node and $B \subset N$ such that $h \in B$. Then, $B$ is an $ij$--critical set if and only if $i,j \notin B$.
+\end{itemize}
 \end{property}
 The following theorem addresses the existence of critical sets in a network.
 \begin{theorem} \label{thm:noblock}
@@ -184,11 +184,11 @@ This concludes the proof of Theorem \ref{thm:noblock}.
 We note that this insight identifies an extremely weak requirement for the existence of critical sets in a network. The corollary below indicates this and follows from Theorem~\ref{thm:noblock}.
 \begin{corollary}
 The following properties hold:
-\begin{numm}
-\item Let $D$ be any incomplete, non-empty network with at least $3$ nodes that are all connected by a path. Then $\mathcal{B} (D) \neq \varnothing$.
+\begin{itemize}
+\item[(i)] Let $D$ be any incomplete, non-empty network with at least $3$ nodes that are all connected by a path. Then $\mathcal{B} (D) \neq \varnothing$.
 
-\item $\mathcal{B} (D) = \varnothing$ for both the empty and complete networks.
-\end{numm}
+\item[(ii)] $\mathcal{B} (D) = \varnothing$ for both the empty and complete networks.
+\end{itemize}
 \end{corollary}
 \begin{proof}
 Following from the proof of Theorem \ref{thm:noblock}, $\mathcal{B}(D) \neq \varnothing$ if and only if there exists a pair $(N,D)$ such that $\# N \geqslant 4$ and at least $4$ nodes are either directly or indirectly connected together such that for some $i,j \in N \colon \min \left\{ \# W_{ij}(D) \mid W_{ij}(D) \in \mathcal{W}_{ij}(D) \right\} \geqslant 3$. Therefore, assertion (i) is shown.
@@ -222,11 +222,11 @@ The \textbf{brokerage} of the node set $B$ in $D$ is defined as
 The coverage of a node set $B \subset N$ consists of pairs of nodes that can be intermediated by the nodes in $B$. The brokerage consists of those pairs in the coverage of $B$ that critically depend on the intermediation provided by $B$-members. The following properties of the coverage and brokerage of node sets are stated without proof.
 \begin{property}
 Let $D$ be some connected network on node set $N$. Then the following properties hold:
-\begin{numm}
-\item If $B \subset M_D$ consists of intermediaries only, then $\Gamma_D (B) \neq \varnothing$.
+\begin{itemize}
+\item[(i)] If $B \subset M_D$ consists of intermediaries only, then $\Gamma_D (B) \neq \varnothing$.
 
-\item $B \in \mathcal{B} (D)$ is a critical set if and only if $\Delta_D (B) \neq \varnothing$.
-\end{numm}
+\item[(ii)] $B \in \mathcal{B} (D)$ is a critical set if and only if $\Delta_D (B) \neq \varnothing$.
+\end{itemize}
 \end{property}
 As stated, any critical set $B \in \mathcal{B} (D)$ has the property that at least one pair of nodes in its coverage critically depends on the intermediation of members of that critical set, i.e., $\Delta_D (B) \neq \varnothing$. This property can be formulated by its dual formulation as that the intermediation by its members cannot be contested by nodes outside the critical set. This is set out in the next definition.
 \begin{definition} \label{contest}
@@ -289,13 +289,13 @@ This shows that $B$ is indeed uncontested.
 We collect a number of auxiliary properties of critical sets in terms of contestability in the following statement. These properties are quite straightforward and their proofs are therefore omitted.
 \begin{property}
 Let $D$ be a connected network on node set $N$ with $n \geqslant 3$.
-\begin{numm}
-\item If $B \subsetneq N \setminus \{ i \}$ for some $i \in N$ is a critical set, then the node set $C = N \setminus \{ i \}$ is contested by $i$, implying that $C$ is not a critical set.
+\begin{itemize}
+\item[(i)] If $B \subsetneq N \setminus \{ i \}$ for some $i \in N$ is a critical set, then the node set $C = N \setminus \{ i \}$ is contested by $i$, implying that $C$ is not a critical set.
 
-\item Sources have no coverage but have the ability to contest other nodes due to their reach.
+\item[(ii)] Sources have no coverage but have the ability to contest other nodes due to their reach.
 
-\item Let $B \subset N$ be a critical set in the network $D$. Then $B$ must contain all nodes that either contest each other for at least one node pair in its coverage $(i,j) \in \Gamma_D (B)$.
-\end{numm}
+\item[(iii)] Let $B \subset N$ be a critical set in the network $D$. Then $B$ must contain all nodes that either contest each other for at least one node pair in its coverage $(i,j) \in \Gamma_D (B)$.
+\end{itemize}
 \end{property}
 
 \section{Intermediation centrality}
@@ -360,8 +360,8 @@ If an intermediation measure quantifies the effectiveness of the brokerage provi
 Let $D$ be a network on the node set $N$ such that $\mathcal{B} (D) \neq \varnothing$ and let $\sigma \colon \mathcal{B} (D) \to \mathbb{R}$ be an intermediation measure on $D$.
 \\
 We define a $\sigma$-\textbf{block structure} as a finite collection $\mathcal{P} (\sigma ) = \left\{ \, B^1, \ldots ,B^K \, \right\} \subset \mathcal{B} (D)$ of critical sets in the network $D$, which is constructed through the following algorithm:
-\begin{numm}
-\item Select
+\begin{itemize}
+\item[(i)] Select
 \[
 B^1 \in \arg\max \left\{ \, \sigma (B) \, \middle| \, B \in \mathcal{B} (D) \, \right\} 
 \]
@@ -370,7 +370,7 @@ and define
 \mathcal{A}^1 = \left\{ \, B \in \mathcal{B} (D) \, \middle| \, B \cap B^1 = \varnothing \, \right\} .
 \]
 
-\item Let $\{ B^1 , \ldots ,B^m \}$ be selected and let $\mathcal{A}^m$ be as constructed. Then select
+\item[(ii)] Let $\{ B^1 , \ldots ,B^m \}$ be selected and let $\mathcal{A}^m$ be as constructed. Then select
 \begin{equation}
 B^{m+1} \in \arg\max \left\{ \, \sigma (B) \, \middle| \, B \in \mathcal{A}^m \, \right\}
 \end{equation}
@@ -380,7 +380,7 @@ and construct
 \end{equation}
 
 \item Continue with \emph{(ii)} until $\mathcal{A}^K = \varnothing$.
-\end{numm}
+\end{itemize}
 The collection of all $\sigma$-structures in $D$ as defined above is denoted by  $\mathbf{P} ( \sigma )$.
 \\
 Every critical set that is part of a $\sigma$-block structure $B \in \cup \mathbf{P} (\sigma ) \subset \mathcal{B} (D)$ is called a $\sigma$-\textbf{block}. The collection of all $\sigma$-blocks is denoted by $\widehat{\mathcal{B}} (\sigma ) \subset \mathcal{B} (D)$.
@@ -390,11 +390,11 @@ A $\sigma$-block structure is a collection of critical sets $B \in \mathcal{B} (
 The properties of the network $D$ and selected control measure $\sigma$ determine how many blocks there emerge. The next theorem states the exact condition under which there emerges a minimal number of blocks, namely a collection of critical sets that make up a unique maximal control pattern. The following properties are again stated without proof.
 \begin{property}
 Let $D$ be a network on node set $N$ such that $\mathcal{B} (D) \neq \varnothing$ and let $\sigma \colon 2^N \to \mathbb{R}$ be some intermediation measure on $D$. Then the following properties hold.
-\begin{numm}
-\item If $\sigma$ is discerning in the sense that $\sigma (B) \neq \sigma_D (B')$ for all distinct critical sets $B,B' \in \mathcal{B} (D)$ with $B \neq B'$, then there exists a unique $\sigma$-block structure on $D$.
+\begin{itemize}
+\item[(i)] If $\sigma$ is discerning in the sense that $\sigma (B) \neq \sigma_D (B')$ for all distinct critical sets $B,B' \in \mathcal{B} (D)$ with $B \neq B'$, then there exists a unique $\sigma$-block structure on $D$.
 
-\item The $\phi$-blocks based on the filter measure $\phi \colon \mathcal{B} (D) \to \mathbb{R}_+$ form the base elements of the filter system of critical sets $\mathcal{B} (D)$ on the set of intermediaries $M_D$ in $D$. Hence, the $\phi$-blocks are exactly the set-theoretically minimal critical sets in the network $D$; this includes the set of middlemen $\mathcal{M} (D)$.
-\end{numm}
+\item[(ii)] The $\phi$-blocks based on the filter measure $\phi \colon \mathcal{B} (D) \to \mathbb{R}_+$ form the base elements of the filter system of critical sets $\mathcal{B} (D)$ on the set of intermediaries $M_D$ in $D$. Hence, the $\phi$-blocks are exactly the set-theoretically minimal critical sets in the network $D$; this includes the set of middlemen $\mathcal{M} (D)$.
+\end{itemize}
 \end{property}
 We conclude the discussion of block structures and blocks with a simple example that exemplifies the different block structures that are supported by different intermediation measures in the same network.
 
@@ -497,18 +497,18 @@ The coalition structure corresponding to some strategy tuple consists of the sub
 We now can derive the following properties of a block formation game.
 \begin{theorem}
 Let $G (D, \sigma_D ,c ) = (N,S, \pi )$ be some block formation game on the network $D$ based on the intermediation measure $\sigma_D \colon \mathcal{B} (D) \to \mathbb{R}$ and the communication cost parameter $c \geqslant 0$. Then the following properties hold.
-\begin{numm}
-\item The block formation game $G (D, \sigma_D ,c ) = (N,S, \pi )$ is a potential game in the sense of \citet{MondererShapley1996} for the potential function $\mathbf{P} \colon \prod_{i \in N} S_i \to \mathbb{R}$ given by
+\begin{itemize}
+\item[(i)] The block formation game $G (D, \sigma_D ,c ) = (N,S, \pi )$ is a potential game in the sense of \citet{MondererShapley1996} for the potential function $\mathbf{P} \colon \prod_{i \in N} S_i \to \mathbb{R}$ given by
 \[
 \mathbf{P} (s) = \sum_{B \in \mathcal{B} (D)} \kappa (s,B) \cdot \sigma_D (B) - \sum_{i \in N} \# C_i (s) \, c .
 \]
 
-\item The block formation game $G (D, \sigma_D ,c) = (N,S, \pi )$ admits at least one Nash equilibrium.
+\item[(ii)] The block formation game $G (D, \sigma_D ,c) = (N,S, \pi )$ admits at least one Nash equilibrium.
 
-\item In particular, the trivial strategy $s^0 \in \prod_{i \in N} S_i$ given by $s^0_i = i_0$ is a Nash equilibrium in the block formation game $G (D, \sigma_D ,c) = (N,S, \pi )$ such that $\mathcal{C} (s^0) = \{ \, \{ i \} \mid i \in N \}$.
+\item[(iii)] In particular, the trivial strategy $s^0 \in \prod_{i \in N} S_i$ given by $s^0_i = i_0$ is a Nash equilibrium in the block formation game $G (D, \sigma_D ,c) = (N,S, \pi )$ such that $\mathcal{C} (s^0) = \{ \, \{ i \} \mid i \in N \}$.
 
 \item A critical set $B \in \mathcal{B} (D)$ emerges through some Nash equilibrium in $G (D, \sigma_D ,c) = (N,S, \pi )$ if and only if there is no node $i \in B \colon \sigma_D (\{ i \}) > \sigma_D (B) - (\# B -1)c$.
-\end{numm}
+\end{itemize}
 \end{theorem}
 \begin{proof}
 Assertion (i) follows immediately from checking the potential function properties of $\mathbf{P}$ in relationship to the game theoretic payoff function $\pi$.
@@ -531,11 +531,11 @@ Consider the block formation game $G (D, \sigma_D ,c) = (N,S, \pi )$ on network 
 Our main result is that $\sigma$-structures exactly correspond to the strong Nash equilibria of the zero-cost block formation game. Hence, all coalitions generated in a strong Nash equilibrium of a zero-cost block formation game are indeed $\sigma$-blocks.
 \begin{theorem} \label{thm:SNE-block}
 Let $D$ be a connected network on $N$ with $\mathcal{B} (D) \neq \varnothing$ and let $\sigma_D \colon \mathcal{B} (D) \to \mathbb{R}$ be an intermediation measure on the network $D$. Assume that communication is costless $(c=0)$. Then the following hold:
-\begin{numm}
-\item Every $\sigma_D$-block structure as introduced in Definition \ref{def:block} can be supported through a strong Nash equilibrium in the corresponding zero-cost block formation game $G (D, \sigma_D ,0)$.
+\begin{itemize}
+\item[(i)] Every $\sigma_D$-block structure as introduced in Definition \ref{def:block} can be supported through a strong Nash equilibrium in the corresponding zero-cost block formation game $G (D, \sigma_D ,0)$.
 
-\item For every strong Nash equilibrium $s^*$ in the zero-cost block formation game $G (D, \sigma_D ,0)$, the generated structure $\mathcal{C} (s^*) \cap \mathcal{B} (D)$ is a $\sigma_D$-block structure on $D$.
-\end{numm}
+\item[(ii)] For every strong Nash equilibrium $s^*$ in the zero-cost block formation game $G (D, \sigma_D ,0)$, the generated structure $\mathcal{C} (s^*) \cap \mathcal{B} (D)$ is a $\sigma_D$-block structure on $D$.
+\end{itemize}
 \end{theorem}
 \begin{proof}
 Let $\sigma_D \colon \mathcal{B} (D) \to \mathbb{R}$ be an intermediation measure on $D$ and let $G (D, \sigma_D ,0) = (N,S, \pi )$ be the corresponding zero-cost block formation game.
@@ -564,11 +564,11 @@ Suppose to the contrary that $\mathcal{C} (s^*) \cap \mathcal{B} (D)$ is not a $
 As an interesting case of the framework developed here is that of the brokerage intermediation measure $\beta$ defined in equation (\ref{eq:brokerage}). This intermediation measure results some interesting properties and can be applied to study data from historic socio-economic networks.
 \begin{theorem} \label{thm:beta-block}
 Let $\beta_D \colon \mathcal{B} (D) \to \mathbb{R}_+$ be the brokerage measure on the network $D$. Then the following properties hold:
-\begin{numm}
-\item Every $\beta_D$-block $B \in \cup \mathbf{P} (\beta_D)$ is non-redundant in the sense that $B \in \widetilde{\mathcal{B}} (D)$, i.e., there is no strictly smaller critical set $B' \subsetneq B$ such that $\Delta_D (B) \subset \Delta_D (B')$.
+\begin{itemize}
+\item[(i)] Every $\beta_D$-block $B \in \cup \mathbf{P} (\beta_D)$ is non-redundant in the sense that $B \in \widetilde{\mathcal{B}} (D)$, i.e., there is no strictly smaller critical set $B' \subsetneq B$ such that $\Delta_D (B) \subset \Delta_D (B')$.
 
-\item Let $B \in \mathcal{B} (D)$ be a critical set such that it contains a strongly uncontested node $i \in B$. If $\beta_D (\{ i \}) \neq \beta_D (B) - (\# B-1) c$ for some $c \geqslant 0$, then $B$ is not supported to form in any strong Nash equilibrium in the block formation game $G (D, \beta_D ,c)$.
-\end{numm}
+\item[(ii)] Let $B \in \mathcal{B} (D)$ be a critical set such that it contains a strongly uncontested node $i \in B$. If $\beta_D (\{ i \}) \neq \beta_D (B) - (\# B-1) c$ for some $c \geqslant 0$, then $B$ is not supported to form in any strong Nash equilibrium in the block formation game $G (D, \beta_D ,c)$.
+\end{itemize}
 \end{theorem}
 \begin{proof}
 Let $D$ be some network on node set $N$. \\[1ex]
