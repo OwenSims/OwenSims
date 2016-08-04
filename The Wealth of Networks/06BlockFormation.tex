@@ -10,11 +10,12 @@ To motivate our discussion we return to the well-known network of elite marriage
 As above, the collection of marriage relationships between the various medieval Florentine houses as a directed network rather than an undirected network. In the network depicted in Figure~\ref{Flocrit} an arc $ij$---represented by an arrow from node $i$ to node $j$---describes that a male in house $i$ marries a female in house $j$. Such an arrow represents the likely flow of information between the two houses: A female gathered information regarding the house $i$ into which she married and pass it back to the house $j$ from which she originated.
 
 From the directed network representation of these marriage relationships, we can glean the power and control exerted by the various houses in medieval Florence. The resulting network analysis should corroborate the historical evidence of power brokerage in medieval Florence. In particular, there were two opposing factions in the Florentine society in the 15th Century: The \emph{Medician} and the \emph{Oligarchic} factions. There was a long-standing power struggle between both factions, but also \emph{within} both factions houses were striving for control. The opposing factions are highlighted in Figure~\ref{Flocrit}: The Medician faction consists of the dark grey nodes and the Oligarchic faction are represented as the light gray nodes in Figure~\ref{Flocrit}.
-\begin{figure}[h] \label{Flocrit}
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.9\textwidth]{imgs/Florentine-marr.png}
 \end{center}
 \caption{The Florentine marriage network}
+\label{Flocrit}
 \end{figure}
 Historical analysis by \citet{Roover1946, Roover1963}, \citet{Padgett1993}, and \citet{Goldthwaite2009} attribute the success of the Medician faction during this time to how well organised the Medician faction was relative to the Oligarchic faction. \citet{Padgett1993} suggest that it was common for a member of the oligarchic faction to attempt to overthrow the leadership of its faction and filter information shared with other members. These are indications that there existed a power struggle within the Oligarchic faction. It may be reasonable to assume that more middlemen exist in the Oligarchic faction than the Medician faction. Indeed, when considering the directed network we identify that more middlemen exist in the oligarchic faction where power is more distributed. Conversely, in the Medician faction, power is more centralised in the House of Medici itself. Below we look at each faction individually and analyse middleman power in each reduced network.
 
@@ -409,13 +410,13 @@ We conclude the discussion of block structures and blocks with a simple example 
 \draw[thick, ->] (10,5) -- (14.25,5);
 \draw[thick, ->] (10,0) -- (14.25,0);
 
-\draw (0,2.5) node[draw,circle,fill=white] {$1$};
-\draw (5,5) node[draw,circle,fill=white] {$2$};
-\draw (5,0) node[draw,circle,fill=white] {$3$};
-\draw (10,5) node[draw,circle,fill=white] {$4$};
-\draw (10,0) node[draw,circle,fill=white] {$5$};
-\draw (15,5) node[draw,circle,fill=white] {$6$};
-\draw (15,0) node[draw,circle,fill=white] {$7$};
+\draw (0,2.5) node[circle,fill=yellow] {$1$};
+\draw (5,5) node[circle,fill=yellow] {$2$};
+\draw (5,0) node[circle,fill=yellow] {$3$};
+\draw (10,5) node[circle,fill=yellow] {$4$};
+\draw (10,0) node[circle,fill=yellow] {$5$};
+\draw (15,5) node[circle,fill=yellow] {$6$};
+\draw (15,0) node[circle,fill=yellow] {$7$};
 
 \end{tikzpicture}
 \end{center}
@@ -597,6 +598,7 @@ Consider network $D$ on node set $N=\{1,2,3,4,5,6,7\}$ originally shown in Figur
 \begin{figure}[h]
 \begin{center}
 \begin{tikzpicture}[scale=0.65]
+
 \draw[thick, ->] (0,2.5) -- (4.4,4.5);
 \draw[thick, ->] (0,2.5) -- (4.4,0.4);
 \draw[thick, ->] (5,5) -- (9.3,5);
@@ -669,7 +671,7 @@ We apply these centrality measures to analyse different directed networks. First
 
 \subsection{The Florentine elite network: A further analysis}
 
-The results of the brokerage and criticality of all Families and banking Houses in the Florentine elite as well as the factions that each were affiliated with are given in Table 1. The rank of each family in this table is based on their criticality.
+The results of the brokerage and criticality of all Families and banking Houses in the Florentine elite as well as the factions that each were affiliated with are given in Table~\ref{table:florentineElite}. The rank of each family in this table is based on their criticality.
 
 \begin{table}[h]
 \begin{center}
@@ -696,6 +698,7 @@ Lambertes  & Oligarchic & 0.077  & 0.000  & 0.000  & 0   \\
 \end{tabular}
 \end{center}
 \caption{Centrality measures for the Florentine elite network in Figure~\ref{Flocrit}}
+\label{table:florentineElite}
 \end{table}
 
 There are a total of $32,474$ potential critical sets in this network which can potentially form, most of these include sources and sinks, though. There result a total of 1,020 critical sets consisting of intermediaries only. Only 36 of these critical sets are non-redundant.
@@ -796,35 +799,35 @@ It is often found that members of a block in the SNE are not connected to each o
 The network diagrams regarding the evolution of the 9/11 terrorist network is given below.
 
 \begin{figure}[h]
-\label{Terrorist-Jan99}
 \begin{center}
 \includegraphics[scale=0.4]{imgs/T1999-01.png}
 \end{center}
 \caption{The 9/11 terrorist network in January 1999}
+\label{Terrorist-Jan99}
 \end{figure}
 
 \begin{figure}[h]
-\label{Terrorist-Dec00}
 \begin{center}
 \includegraphics[scale=0.4]{imgs/T2000-12.png}
 \end{center}
 \caption{The 9/11 terrorist network in December 2000}
+\label{Terrorist-Dec00}
 \end{figure}
 
 \begin{figure}[h]
-\label{Terrorist-May01}
 \begin{center}
 \includegraphics[scale=0.4]{imgs/T2001-05.png}
 \end{center}
 \caption{The 9/11 terrorist network in May 2001}
+\label{Terrorist-May01}
 \end{figure}
 
 \begin{figure}[h]
-\label{Terrorist-Aug01}
 \begin{center}
 \includegraphics[scale=0.4]{imgs/T2001-08.png}
 \end{center}
 \caption{The 9/11 terrorist network in August 2001}
+\label{Terrorist-Aug01}
 \end{figure}
 
 \newpage

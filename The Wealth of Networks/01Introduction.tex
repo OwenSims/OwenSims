@@ -73,7 +73,7 @@ The introduction of these social characteristics, in the form of pairwise relati
 
 The evolving relational structure places social constraints on each individual economic agent. These social constraints come from two phenomena. First, from the relational structure of social and economic networks that the agents develop through social relationships and exchange. Second, from the socially constructed institutions and systems of governance that guide agents through the formation of relational networks. The existence of systems of governance brings with it a rule set that constrains the potential actions of individual agents and allocates resources between the population of economic agents. Both social constraints are investigated throughout the monograph.
 
-The analysis of social structure and social constraints is not new. The investigation to how participants act within a social economy was one of the eventual objectives of~\citet{vNM}. This general research into the interaction of social structure and economic outcomes was extended by~\citet{KalaiMiddlemen1978} who remarked that social defects within an economic environment can lead to an uneven distribution of power within society. Specifically, there will exist an unequal distribution of power throughout society. Indeed, intermediating agents can potentially leverage their position within a matrix of relationships, exercising their power on others agents that they are connected to. An interesting point is raised---and one that is noted in other works since \citet{Granovetter2005}---is that the social abilities of a set of agents can have a significant impact on their economic outcomes\footnote{It is worth noting that although the economic benefits of dominant middleman activities have been substantially highlighted, \citet{KalaiMiddlemen1978} focus also on the costly disadvantages of sustaining a middleman position. Specifically, through a comparison of the Core, the authors note that the position of a middleman can be burdensome.}.
+The analysis of social structure and social constraints is not new. The investigation to how participants act within a social economy was one of the eventual objectives of~\citet{vNM}. This general research into the interaction of social structure and economic outcomes was extended by~\citet{KalaiMiddlemen1978} who remarked that social defects within an economic environment can lead to an uneven distribution of power within society. Specifically, there will exist an unequal distribution of power throughout society. Indeed, intermediating agents can potentially leverage their position within a matrix of relationships, exercising their power on others agents that they are connected to. An interesting point is raised---and one that is noted in other works since \citet{Granovetter2005}---is that the social abilities of a set of agents can have a significant impact on their economic outcomes~\footnote{It is worth noting that although the economic benefits of dominant middleman activities have been substantially highlighted, \citet{KalaiMiddlemen1978} focus also on the costly disadvantages of sustaining a middleman position. Specifically, through a comparison of the Core, the authors note that the position of a middleman can be burdensome.}.
 
 \subsection{Middlemen and entrepreneurs}
 
@@ -115,7 +115,6 @@ Finally, Jackson and Rogers note that the clustering among neighbours of a given
 Since noting these characteristics a variety of random graph models have been proposed to explain some of the characteristics. The three most common models are that of a \emph{random network}, a \emph{small-world network}, and a \emph{scale-free network}. The notable structures of small-world and scale-free networks can be seen in Figure~\ref{networks} (a) and (b) respectively. These models of network formation can be either random and algorithmic, or can be strategic with the use of game theory whereby individual agents have some incentive to either form or sever links.
 
 \begin{figure}[t]
-\label{networks}
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
 \draw[thick] (0,5) -- (5,0);
@@ -135,10 +134,6 @@ Since noting these characteristics a variety of random graph models have been pr
 \draw[thick] (8.5,8.5) -- (5,10);
 \draw[thick] (5,10) -- (1.5,8.5);
 \draw[thick] (1.5,8.5) -- (0,5);
-
-%\draw[thick] (1.5,1.5) -- (8.5,8.5);
-%\draw[thick] (8.5,1.5) -- (0,5);
-%\draw[thick] (8.5,1.5) -- (1.5,8.5);
 
 \draw[thick] (17.5,0) -- (22.5,0);
 \draw[thick] (17.5,0) -- (15,5);
@@ -162,20 +157,21 @@ Since noting these characteristics a variety of random graph models have been pr
 \draw (1.5,8.5) node[minimum size=2em,circle,fill=red!20] {$6$};
 \draw (8.5,1.5) node[minimum size=2em,circle,fill=red!20] {$7$};
 \draw (8.5,8.5) node[minimum size=2em,circle,fill=red!20] {$8$};
-\draw (17.5,0) node[minimum size=2em,circle,fill=green!20] {$1$};
-\draw (22.5,0) node[minimum size=2em,circle,fill=green!20] {$2$};
-\draw (15,5) node[minimum size=2em,circle,fill=green!20] {$3$};
-\draw (25,5) node[minimum size=2em,circle,fill=green!20] {$4$};
-\draw (20,2.5) node[minimum size=2em,circle,fill=green!20] {$5$};
-\draw (20,10) node[minimum size=2em,circle,fill=green!20] {$6$};
-\draw (19,7) node[minimum size=2em,circle,fill=green!20] {$7$};
-\draw (21,7) node[minimum size=2em,circle,fill=green!20] {$8$};
+\draw (17.5,0) node[minimum size=2em,circle,fill=blue!20] {$1$};
+\draw (22.5,0) node[minimum size=2em,circle,fill=blue!20] {$2$};
+\draw (15,5) node[minimum size=2em,circle,fill=blue!20] {$3$};
+\draw (25,5) node[minimum size=2em,circle,fill=blue!20] {$4$};
+\draw (20,2.5) node[minimum size=2em,circle,fill=blue!20] {$5$};
+\draw (20,10) node[minimum size=2em,circle,fill=blue!20] {$6$};
+\draw (19,7) node[minimum size=2em,circle,fill=blue!20] {$7$};
+\draw (21,7) node[minimum size=2em,circle,fill=blue!20] {$8$};
 
 \draw (5,-2) node {(a)};
 \draw (20,-2) node {(b)};
 \end{tikzpicture}
 \end{center}
 \caption[Small-world and scale-free networks]{Network (a) shows a circular small-world model and network (b) shows a scale-free model.}
+\label{networks}
 \end{figure}
 
 \paragraph{Random graph models.}
@@ -219,7 +215,6 @@ Exchange theory is concerned with how the structure of relationships among agent
 Emerson's work combined with the mathematical research of matching in bipartite graphs \citep{Hall1935} provided the basis for more research in bilateral trading models \citep{Corominas-Bosch1999, Corominas-Bosch2004}. Much like the implicit assumption of general equilibrium models, these models assume a dichotomy between the demand and supply within an economy. Therefore, all networks that emerge are simply between a set of nodes who produce the supply of the economy and a set of nodes who demand the produced goods. \citet{Blume2009} provide a convincing model of economic exchange on networks. They also dichotomise the forces of demand and supply by introducing a set of `consumers' and a set of `producers' whereby a consumer can only engage in an economic exchange with a producer. Each economic exchange is represented as a link. As a consequence, a bipartite network is formed whereby economic exchange occurs across the links between consumers and producers. The structure of their model follows that of \citet{KrantonMinehart2001} whereby, again, the forces of demand and supply are partitioned therefore forming two disjoint sets of consumers and producers. This bipartite set-up is also taken by \citet[Chapter~10]{Jackson2008}. Easley and Kleinberg find that this networked structure provides some nice properties, being able to show that society's welfare is maximised when prices develop to guide consumers to producers. Moreover, they find that, along with \citet{Kakade2004a, Kakade2004b}, a network provides a good basis for price dispersion as was seen in the Marseille fish market case.
 
 \begin{figure}[t]
-\label{fig:bipartiteexchange}
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
 \draw[thick] (5,0) -- (15,5);
@@ -228,26 +223,27 @@ Emerson's work combined with the mathematical research of matching in bipartite 
 \draw[thick] (15,0) -- (25,5);
 \draw[thick] (25,0) -- (20,5);
 
-\draw (5,0) node[minimum size=2em,circle,fill=blue!20] {$6$};
-\draw (5,5) node[minimum size=2em,circle,fill=purple!20] {$1$};
+\draw (5,0) node[minimum size=2em,circle,fill=green!20] {$6$};
+\draw (5,5) node[minimum size=2em,circle,fill=orange!40] {$1$};
 
-\draw (10,0) node[minimum size=2em,circle,fill=blue!20] {$7$};
-\draw (10,5) node[minimum size=2em,circle,fill=purple!20] {$2$};
+\draw (10,0) node[minimum size=2em,circle,fill=green!20] {$7$};
+\draw (10,5) node[minimum size=2em,circle,fill=orange!40] {$2$};
 
-\draw (15,0) node[minimum size=2em,circle,fill=blue!20] {$8$};
-\draw (15,5) node[minimum size=2em,circle,fill=purple!20] {$3$};
+\draw (15,0) node[minimum size=2em,circle,fill=green!20] {$8$};
+\draw (15,5) node[minimum size=2em,circle,fill=orange!40] {$3$};
 
-\draw (20,0) node[minimum size=2em,circle,fill=blue!20] {$9$};
-\draw (20,5) node[minimum size=2em,circle,fill=purple!20] {$4$};
+\draw (20,0) node[minimum size=2em,circle,fill=green!20] {$9$};
+\draw (20,5) node[minimum size=2em,circle,fill=orange!40] {$4$};
 
-\draw (25,0) node[minimum size=2em,circle,fill=blue!20] {$10$};
-\draw (25,5) node[minimum size=2em,circle,fill=purple!20] {$5$};
+\draw (25,0) node[minimum size=2em,circle,fill=green!20] {$10$};
+\draw (25,5) node[minimum size=2em,circle,fill=orange!40] {$5$};
 
 \draw (0,0) node {Producers};
 \draw (0,5) node {Consumers};
 \end{tikzpicture}
 \end{center}
 \caption{A matching market of consumers and producers}
+\label{fig:bipartiteexchange}
 \end{figure}
 
 This bipartite representation of a market, known as a ``matching market'', can be seen in Figure~\ref{fig:bipartiteexchange}. This notion of a matching market is further extended by \citet{EasleyKleinberg2010} to include `traders' as intermediaries between consumers and producers. From this they informally define a notion of competition in a networked economy, suggesting that traders have an opportunity to monopolise flows of economic exchange between producers and consumers. The notion regarding the monopolisation of trade is extended and considered in detail in Chapters~\ref{ch:criticalnodes} and~\ref{ch:blocks} where we discuss measurements of brokerage in networked economies.
