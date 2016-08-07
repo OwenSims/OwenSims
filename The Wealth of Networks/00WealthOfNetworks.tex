@@ -20,6 +20,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{thmtools}
 \usepackage[section]{placeins}
 
 \restylefloat{table}
@@ -106,6 +107,9 @@
 
 \newenvironment{example}{\begin{expl} \rm}{\hfill $\blacklozenge$ \end{expl}}{}
 \newenvironment{remark}{\begin{rmrk} \rm}{\hfill $\blacklozenge$ \end{rmrk}}{}
+
+\counterwithin{figure}{section}
+% \counterwithin{table}{section}
 
 \makeindex
 
@@ -210,5 +214,7 @@ Throughout the monograph, we justify the claim that entrepreneurs are analogous 
 
 \bibliographystyle{harvard}
 \bibliography{OSDB}
+
+% \listoftheorems[ignoreall,show={theorem}]
 
 \end{document}

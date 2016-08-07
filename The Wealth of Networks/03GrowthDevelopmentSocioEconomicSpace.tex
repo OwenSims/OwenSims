@@ -9,9 +9,10 @@ An important element for the development of a socio-economic space is the role o
 
 \paragraph{Chapter outline.}
 
-The purpose of this chapter is to provide a formal and conceptual discussion on the socio-economic space using insights discussed previously. We also illustrate the growth and development, and thus an effect of entrepreneurship and the entrepreneurial function, within the socio-economic space through the use of computational simulations. This chapter is therefore partitioned into four sections. The first provides a discussion of the socio-economic space which acts as an environment where economic agents interact and subsequently construct interaction infrastructures. Section two discusses theoretical and representative states of the socio-economic space. Section three considers the growth and development of the socio-economic space; in particular we discuss the notions of entrepreneurship and entrepreneurial function within the relational perspective. Finally, we provide simulations of the growth and development of the socio-economic space.
+The purpose of this chapter is to provide a formal and conceptual discussion on the socio-economic space using insights discussed previously. We also illustrate the growth and development, and thus an effect of entrepreneurship and the entrepreneurial function, within the socio-economic space through the use of computational simulations. We partition this chapter into four sections. Section~\ref{sec:socio-economicspace} provides a discussion of the socio-economic space which acts as an environment where economic agents interact and subsequently construct interaction infrastructures. Section~\ref{sec:StatesOfTheSocioEconomicSpace} discusses theoretical and representative states of the socio-economic space. Section~\ref{sec:GrowthDevelopment} considers the growth and development of the socio-economic space; in particular we discuss the notions of entrepreneurship and entrepreneurial function within the relational perspective. Finally, we provide simulations of the growth and development of the socio-economic space in Section~\ref{sec:Simulations}.
 
-\section{The socio-economic space} \label{sec:socio-economicspace}
+\section{The socio-economic space} 
+\label{sec:socio-economicspace}
 
 All economic relationships and interactions are socially embedded and occur within some well-defined space. This interaction space is termed as a socio-economic space, which refers to \emph{a set of economic agents engaged in a collection of general economic interactions and hierarchical relations that operate with respect to some well-defined governance system}. As such the socio-economic space contains economic agents, interaction infrastructures, and a governance system guiding the formation of these relationships. The importance of a governance system to guide social and economic interactions fits with the notion of an \emph{imagined community}, a concept that highlights the importance of a socially accepted and trusted governance system in harmonising interactions.
 
@@ -129,6 +130,7 @@ This section has provided some structure to the relational theory in two ways. F
 The socio-economic space is a dynamic concept. As noted by the schematic representation of the socio-economic space in Figure~\ref{spacestructure} this dynamism is triggered by pressures that derive from entrepreneurial activities. We elaborate on the \emph{states} of the socio-economic space and the mechanism of development through entrepreneurial activity.
 
 \section{States of the socio-economic space}
+\label{sec:StatesOfTheSocioEconomicSpace}
 
 Particular economic states can be identified through the characteristics of the governance system and interaction infrastructures, which economic agents are ultimately embedded and operate within. At this point we do not comment on how one economic state transitions to another other, but instead focus on potential states that can exist. It is unlikely that the space merely tips from one state to the other; it may indeed be a gradual phase transition of self-reinforcing institutions that are punctuated by institutional and network alternations, which are reflected in notable changes in certain aspects of the governance system.
 
@@ -219,7 +221,7 @@ The deepening of the division of labour and the subsequent automatisation of rol
 The evolution of the socio-economic space also illustrates tendency toward a wider array of well-defined socio-economic roles, a more distinctive presence of automated `non-human' or `inorganic' socio-economic roles, and more sophisticated institutionalised structures for supporting a deepened division of labour. The driving force of this development is the actions of entrepreneurship. Below we introduce the notion of entrepreneurship within the context of growth and development of the socio-economic space.
 
 \section{Growth, development, and the entrepreneur}
-\label{subsec:growthdev}
+\label{sec:GrowthDevelopment}
 
 Figure~\ref{spacestructure} introduces a set of important forces within the socio-economic space. We have already discussed the forces of embeddedness with respect to socio-economic roles, networking with respect to formation and structure of interaction infrastructures, and guidance with respect to institutions within the governance system the guide interaction and behaviours. Our discussion thus far has, however, been deficient with respect to the force of entrepreneurship, which acts to influence a change within the layers of the socio-economic space. The act of entrepreneurship is closely related to the development of the socio-economic space, and its transition from one state to another. Importantly, it is an action that impacts all three layers of the socio-economic space: the population of economic agents, the structure of the interaction networks, and the institutions within the socio-economic space.
 
@@ -290,6 +292,7 @@ Baumol's hypothesis can be utilised for our analysis. Indeed, to this point we h
 It is the potential regression of society through the actions of entrepreneurship that are of interest to many economists. Indeed, this relationship between regression and entrepreneurship are discussed in more detail throughout the monograph. In particular we align the network notion of a middleman to that of an entrepreneur whereby the actions of the entrepreneur is to extract value and broker relations and interactions between agents.
 
 \section{Simulating growth and development}
+\label{sec:Simulations}
 
 This chapter has provided an elaborate discussion on the definition, structure, growth, and development of the socio-economic space. This final section combines these concepts, and other concepts introduced previously, to simulate the growth and development of the socio-economic space. During this simulation we do not consider the characteristics of the entrepreneur directly, but instead consider the effects of entrepreneurship and subsequent development through changing institutional structures. Growth is simulated with the use of a growing population of economic agents, the emergence of a more sprawling interaction infrastructures, and variability in the production possibilities of the economic agents. We find common interaction infrastructure topologies that emerge with a given governance system and analyse how the distribution of utility is impacted with different institutions.
 
@@ -328,7 +331,7 @@ Given a population of consumer-producers, denoted by the set $N$, we denote an e
 
 To maximise her utility with respect to her local socio-economic environment a consumer-producer must take into consideration the existing governance system, all potential economic relationships, and the sequence of those relationships that are available to her. The adaptive specialisation problem is given as the maximisation of an agents utility subject to the socio-economic space of specialised agents and systems of governance. For a general way to describe the exchange mechanisms of the governance system the adaptive specialisation problem is given by the following definition.
 
-\begin{definition} \label{def:adaptiveSpecialisationProblem}
+\begin{definition}[Adaptive specialisation problem] \label{def:adaptiveSpecialisationProblem}
 Consider a consumer-producer $i = (u_{i}, \mathcal{P}_i)$ and an exchange mechanism given by the governance system $\Lambda$. Consumer-producer $i$ adaptively specialises when she solves the following optimisation
 \begin{equation}
 	\max u_{i}(x) \mbox{ subject to } x_{j} \mbox{ for all } j \in N \mbox{ and } \Lambda ~ ,
@@ -699,10 +702,8 @@ The result is the formation of a scale-free network with a degree distribution t
 \label{Sim7}
 \end{figure}
 
-\subsubsection{Analysis of results} % (fold)
+\subsubsection{Analysis of results}
 \label{sub:analysis_of_results}
-
-% subsection analysis_of_results (end)
 
 The representation between the interaction of elements of the socio-economic space shown in Figure~\ref{spacestructure} suggests that the institutions of a socio-economic space have a direct impact on the interaction infrastructures, which are formed by the economic interactions of a population of agents. The infrastructure is therefore a reflection of the state of the institutions and that entrepreneurship acts to alter the institutional environment, which is reflected in the interaction infrastructure itself. Our simulations of the socio-economic space based on the division of labour confirms the representation shown in Figure~\ref{spacestructure}. Specifically we model institutional and technological change in a number of ways. First, we note institutional change through changes in the interaction inefficiency, or transaction costs, of exchange between pairs of economic agents. In short we find that as the interaction inefficiency rises from $\Delta(\Lambda) = 0$ to some positive real number the number of \emph{structural holes} in the network increases and there emerges an increased distribution of utility throughout the network. These structural holes appear due to the reduced benefits of forming economic relationships with the entire population of agents. A natural consequence of the algorithm that solves the adaptive specialisation problem is that for all economic agents the next economic relationship formed will provide less benefit than the previous relationship: there is diminishing marginal benefit for each economic interaction. 
 
