@@ -1,10 +1,10 @@
 numberToName <- function(nodeNumbers, nodeNames) {
   translation <- ""
-
+  
   translation <- sapply(1:length(nodeNumbers),
                         function(x) {
                           match <- match(nodeNumbers[x], nodeNames[, 1])
-
+                          
                           translation[x] <-
                             as.character(nodeNames[match, 2])
                         })
@@ -18,13 +18,13 @@ adjacenyMatrix <- function(network, nodeNames) {
     nrow = nrow(nodeNames),
     ncol = nrow(nodeNames)
   )
-
+  
   for (i in 1:nrow(network)) {
     networkMatrix[network[i, 1], network[i, 2]] <-
       networkMatrix[network[i, 1], network[i, 2]] + 1
   }
   return(networkMatrix)
-
+  
 }
 
 
@@ -33,33 +33,33 @@ undirectedAdjMatrix <- function(network, nodeNames, adjMatrix) {
     adjMatrix <- adjacenyMatrix(network,
                                 nodeNames)
   }
-
-  adjMatrix[,] <- !adjMatrix %in% c("0",
-                                    "FALSE")
-
+  
+  adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                     "FALSE")
+  
   adjMatrix <- adjMatrix  + t(adjMatrix)
-
+  
   return(adjMatrix)
-
+  
 }
 
 
 adjacenyDF <- function(network, nodeNames) {
   networkDF <- adjacenyMatrix(network = network,
                               nodeNames = nodeNames)
-
+  
   networkDF <- as.data.frame.matrix(networkDF)
-
+  
   colnames(networkDF) <- rownames(networkDF) <- nodeNames[, 2]
-
+  
   return(networkDF)
-
+  
 }
 
 
 degree <- function(network, nodeNames) {
   inDeg <- outDeg <- degree <- 0
-
+  
   for (i in 1:nrow(nodeNames)) {
     inDeg[i] <- sum(network[, 2] == i)
     outDeg[i] <- sum(network[, 1] == i)
@@ -67,14 +67,14 @@ degree <- function(network, nodeNames) {
                     subset(network[, 1], network[, 2] == i))
     degree[i] <- length(unique(neighbours))
   }
-
+  
   Deg <- data.frame(
     name = nodeNames[, 2],
     inDegree = inDeg,
     outDegree = outDeg,
     degree = degree
   )
-
+  
   return(Deg)
 }
 
@@ -84,24 +84,26 @@ connectivity <- function(network, nodeNames, adjMatrix) {
     adjMatrix <- adjacenyMatrix(network,
                                 nodeNames)
   }
-
-  adjMatrix[,] <- !adjMatrix %in% c("0",
-                                    "FALSE")
-
+  
+  library(expm)
+  
+  adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                     "FALSE")
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix <- adjMatrix + (adjMatrix %^% i)
-    adjMatrix[,] <- !adjMatrix %in% c("0",
-                                      "FALSE")
+    adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                       "FALSE")
   }
-
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix[i, i] <- 0
   }
-
+  
   k <- sum(adjMatrix)
-
+  
   return(k)
-
+  
 }
 
 
@@ -110,30 +112,30 @@ predecessorsSuccessors <- function(network, nodeNames, adjMatrix) {
     adjMatrix <- adjacenyMatrix(network,
                                 nodeNames)
   }
-
-  adjMatrix[,] <- !adjMatrix %in% c("0",
-                                    "FALSE")
-
+  
+  adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                     "FALSE")
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix <- adjMatrix + (adjMatrix %^% i)
-    adjMatrix[,] <- !adjMatrix %in% c("0",
-                                      "FALSE")
+    adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                       "FALSE")
   }
-
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix[i, i] <- 0
   }
-
+  
   noSuccessors <- noPredecessors <- 0
-
+  
   for (i in 1:nrow(adjMatrix)) {
-    noSuccessors[i] <- length(which(adjMatrix[i,] == 1))
+    noSuccessors[i] <- length(which(adjMatrix[i, ] == 1))
     noPredecessors[i] <- length(which(adjMatrix[, i] == 1))
   }
-
+  
   adjMatrix <- adjacenyMatrix(network,
                               nodeNames)
-
+  
   noPredecessorsSuccessors <-
     data.frame(
       nodeNumber = seq(1, nrow(adjMatrix)),
@@ -141,24 +143,24 @@ predecessorsSuccessors <- function(network, nodeNames, adjMatrix) {
       noPred = noPredecessors,
       noSucc = noSuccessors
     )
-
+  
   return(noPredecessorsSuccessors)
-
+  
 }
 
 
 potentialBrokerage <- function(network, nodeNames, adjMatrix) {
   d <- degree(network, nodeNames)
   PS <- predecessorsSuccessors(network, nodeNames, adjMatrix)
-
+  
   potBrokerage <- 0
-
+  
   for (i in 1:nrow(nodeNames)) {
     potBrokerage <- potBrokerage + (PS$noSucc[i] - d$outDegree[i])
   }
-
+  
   potBrokerage <- max(potBrokerage, 1)
-
+  
   return(potBrokerage)
 }
 
@@ -169,31 +171,31 @@ middlemanPower <- function(network, nodeNames, adjMatrix) {
   } else {
     originalAdjMatrix <- adjMatrix
   }
-
+  
   PS <- predecessorsSuccessors(network = network,
                                nodeNames = nodeNames,
                                adjMatrix = adjMatrix)
-
+  
   K <- connectivity(adjMatrix = originalAdjMatrix)
-
+  
   power <- 0
-
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix <- originalAdjMatrix
-
-    adjMatrix[i,] <- adjMatrix[, i] <- 0
-
+    
+    adjMatrix[i, ] <- adjMatrix[, i] <- 0
+    
     kappa <- connectivity(adjMatrix = adjMatrix)
-
+    
     power[i] <- K - kappa - PS$noPred[i] - PS$noSucc[i]
-
+    
   }
-
+  
   potBroker <- potentialBrokerage(network, nodeNames)
-
+  
   power <- round(power / as.integer(potBroker),
                  digits = 3)
-
+  
   return(power)
 }
 
@@ -201,14 +203,14 @@ middlemanPower <- function(network, nodeNames, adjMatrix) {
 strongWeak <- function(network, nodeNames, adjMatrix) {
   if (missing(adjMatrix)) {
     adjMatrix <- adjacenyMatrix(network, nodeNames)
-
+    
   }
   power <- middlemanPower(network, nodeNames, adjMatrix)
-
+  
   unAdjMatrix <- undirectedAdjMatrix(network, nodeNames, adjMatrix)
-
+  
   unPower <- middlemanPower(network, nodeNames, unAdjMatrix)
-
+  
   middlemanType <- sapply(1:length(power), function(x) {
     if (unPower[x] == 0 & power[x] == 0) {
       "Non-middleman"
@@ -218,69 +220,80 @@ strongWeak <- function(network, nodeNames, adjMatrix) {
       "Strong middleman"
     }
   })
-
+  
   return(middlemanType)
-
+  
 }
 
 middlemanPowerDetail <- function(network, nodeNames, adjMatrix) {
   if (missing(adjMatrix)) {
     adjMatrix <- adjacenyMatrix(network, nodeNames)
-
+    
   }
   power <- middlemanPower(network, nodeNames, adjMatrix)
   type <- strongWeak(network, nodeNames, adjMatrix)
-
+  
   details <- data.frame(
-    number = nodeNames[,1],
-    name = nodeNames[,2],
+    number = nodeNames[, 1],
+    name = nodeNames[, 2],
     power = power,
     type = type
   )
-
+  
   return(details)
-
+  
 }
 
 
 setPredSucc <- function(network, nodeNames, s, adjMatrix) {
-  if (s > nrow(nodeNames)) {
-    return(print("s must be less than or equal to number of nodes in network [nrow(nodeNames)]"))
+  if (missing(s)) {
+    s <- nrow(nodeNames)
   }
-
+  
+  if (s > nrow(nodeNames)) {
+    return(print(
+      "s must be less than or equal to number of nodes in network [nrow(nodeNames)]"
+    ))
+  }
+  
   if (missing(adjMatrix)) {
     adjMatrix <- adjacenyMatrix(network,
                                 nodeNames)
   }
-
-  adjMatrix[,] <- !adjMatrix %in% c("0",
-                                    "FALSE")
-
+  
+  adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                     "FALSE")
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix <- adjMatrix + (adjMatrix %^% i)
-    adjMatrix[,] <- !adjMatrix %in% c("0",
-                                      "FALSE")
+    adjMatrix[, ] <- !adjMatrix %in% c("0",
+                                       "FALSE")
   }
-
+  
   for (i in 1:nrow(adjMatrix)) {
     adjMatrix[i, i] <- 0
   }
-
+  
   for (i in 1:s) {
     sets <- combn(seq(1:nrow(adjMatrix)),
                   m = i)
-
+    
     for (j in 1:ncol(sets)) {
       set <- sets[, j]
-
-      successors <- predecessors <- noSucc <- noPred <- 0
-
+      
+      successors <- predecessors <-
+        noSucc <- noPred <- 0
+      
       for (k in 1:i) {
-        successors <- c(successors, which(adjMatrix[set[k], ] == 1))
+        successors <-
+          c(successors, which(adjMatrix[set[k],] == 1))
         predecessors <-
           c(predecessors, which(adjMatrix[, set[k]] == 1))
       }
-
+      
+      totalSucc <- length(successors) - 1
+      totalPred <- length(predecessors) - 1
+      
       if (length(successors) > 1) {
         successors <- setdiff(unique(successors),
                               c(set,
@@ -289,7 +302,7 @@ setPredSucc <- function(network, nodeNames, s, adjMatrix) {
       } else {
         successors <- noSucc <- 0
       }
-
+      
       if (length(predecessors) > 1) {
         predecessors <- setdiff(unique(predecessors),
                                 c(set,
@@ -298,38 +311,42 @@ setPredSucc <- function(network, nodeNames, s, adjMatrix) {
       } else {
         predecessors <- noPred <- 0
       }
-
+      
       if (i == 1 & j == 1 & k == 1) {
         PS <- list(
           set = list(set),
           successors = list(successors),
           predecessors = list(predecessors),
           noSucc = list(noSucc),
-          noPred = list(noPred)
+          noPred = list(noPred),
+          totalSucc = list(totalSucc),
+          totalPred = list(totalPred)
         )
-
+        
       } else {
         a <- list(
           set = list(set),
           successors = list(successors),
           predecessors = list(predecessors),
           noSucc = list(noSucc),
-          noPred = list(noPred)
+          noPred = list(noPred),
+          totalSucc = list(totalSucc),
+          totalPred = list(totalPred)
         )
-
+        
         PS <- rbindlist(list(PS,
                              a),
                         use.names = TRUE,
                         fill = TRUE)
-
+        
       }
-
+      
     }
-
+    
   }
-
+  
   return(PS)
-
+  
 }
 
 
@@ -337,42 +354,71 @@ blockPower <- function(network, nodeNames, s, adjMatrix, setPS) {
   if (missing(s)) {
     s <- nrow(nodeNames)
   }
-
+  
   if (missing(adjMatrix)) {
     originalAdjMatrix <- adjMatrix <- adjacenyMatrix(network, nodeNames)
   } else {
     originalAdjMatrix <- adjMatrix
   }
-
+  
   if (missing(setPS)) {
     setPS <- setPredSucc(network, nodeNames, s, adjMatrix)
   }
-
+  
   K <- connectivity(adjMatrix = originalAdjMatrix)
-
+  
   setPS$power <- 0
-
+  
   for (i in 1:nrow(setPS)) {
     adjMatrix <- originalAdjMatrix
-
-    for (j in 1:length(setPS$set[[i]])) {
-
-      adjMatrix[setPS$set[[i]][j], ] <- adjMatrix[, setPS$set[[i]][j]] <- 0
-
+    
+    K <- allSucc <- 0
+    
+    for (j in 1:nrow(nodeNames)) {
+      if (!(length(setPS$successors[[j]]) == 0 || setPS$successors[[j]] == 0)) {
+      if (!(j %in% setPS$set[[i]])) {
+        inSet <- setPS$set[[i]] %in% setPS$successors[[j]]
+        
+        noSet <- sum(inSet == TRUE)
+        
+        if (noSet > 0) {
+          l <- length(setPS$successors[[j]]) - noSet + 1
+          K <- K + l
+          
+        } else {
+          K <- K + length(unique(setPS$successors[[j]]))
+          
+        }
+        
+      } else {
+      allSucc <- c(allSucc, setPS$successors[[j]])
+      
+      }
+      
+      }
+      
     }
-
+    
+    K <- K + length(setdiff(unique(allSucc), setPS$set[[i]])) - 1
+    
+    for (j in 1:length(setPS$set[[i]])) {
+      adjMatrix[setPS$set[[i]][j], ] <- adjMatrix[, setPS$set[[i]][j]] <- 0
+      
+    }
+    
     kappa <- connectivity(adjMatrix = adjMatrix)
-
-    setPS$power[i] <- K - kappa - setPS$noPred[[i]] - setPS$noSucc[[i]]
-
+    
+    setPS$power[i] <-
+      K - kappa - setPS$noSucc[[i]] - setPS$noPred[[i]]
+    
   }
-
+  
   potBroker <- potentialBrokerage(network = network,
                                   nodeNames = nodeNames)
-
-  setPS$power <- round(setPS$power / as.integer(potBroker),
+  
+  setPS$power <- round(setPS$power / 1,
                        digits = 3)
-
+  
   return(setPS)
-
+  
 }
