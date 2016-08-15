@@ -170,7 +170,9 @@ middlemanPower <- function(network, nodeNames, adjMatrix) {
     originalAdjMatrix <- adjMatrix
   }
 
-  PS <- predecessorsSuccessors(network, nodeNames, adjMatrix)
+  PS <- predecessorsSuccessors(network = network,
+                               nodeNames = nodeNames,
+                               adjMatrix = adjMatrix)
 
   K <- connectivity(adjMatrix = originalAdjMatrix)
 
@@ -327,5 +329,50 @@ setPredSucc <- function(network, nodeNames, s, adjMatrix) {
   }
 
   return(PS)
+
+}
+
+
+blockPower <- function(network, nodeNames, s, adjMatrix, setPS) {
+  if (missing(s)) {
+    s <- nrow(nodeNames)
+  }
+
+  if (missing(adjMatrix)) {
+    originalAdjMatrix <- adjMatrix <- adjacenyMatrix(network, nodeNames)
+  } else {
+    originalAdjMatrix <- adjMatrix
+  }
+
+  if (missing(setPS)) {
+    setPS <- setPredSucc(network, nodeNames, s, adjMatrix)
+  }
+
+  K <- connectivity(adjMatrix = originalAdjMatrix)
+
+  setPS$power <- 0
+
+  for (i in 1:nrow(setPS)) {
+    adjMatrix <- originalAdjMatrix
+
+    for (j in 1:length(setPS$set[[i]])) {
+
+      adjMatrix[setPS$set[[i]][j], ] <- adjMatrix[, setPS$set[[i]][j]] <- 0
+
+    }
+
+    kappa <- connectivity(adjMatrix = adjMatrix)
+
+    setPS$power[i] <- K - kappa - setPS$noPred[[i]] - setPS$noSucc[[i]]
+
+  }
+
+  potBroker <- potentialBrokerage(network = network,
+                                  nodeNames = nodeNames)
+
+  setPS$power <- round(setPS$power / as.integer(potBroker),
+                       digits = 3)
+
+  return(setPS)
 
 }
