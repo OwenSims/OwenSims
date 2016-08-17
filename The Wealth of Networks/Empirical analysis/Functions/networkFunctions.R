@@ -544,22 +544,20 @@ criticalSets <-
 
 coverageMeasure <- function(network, nodeNames, s, adjMatrix, setPS, setPower) {
   
-  crits <- criticalSets(network, N)
+  crits <- criticalSets(network, nodeNames)
   
-  critsCov <- coverage(network, N, setPS = crits)
+  critsCov <- coverage(network, nodeNames, setPS = crits)
   
+  critsCov$coverageMeasure <- round(critsCov$coverage / critsCov$setSize,
+                                    digits = 3)
   
+  return(critsCov)
   
 }
 
 
 blockSNE <-
-  function(network,
-           nodeNames,
-           s,
-           adjMatrix,
-           setPS,
-           setPower) {
+  function(network, nodeNames, s, adjMatrix, setPS, setPower) {
     if (missing(setPower)) {
       setPower <-
         blockPower(network, nodeNames, s, adjMatrix, setPS, perCapita = TRUE)
@@ -585,3 +583,13 @@ blockSNE <-
     return(SNE)
     
   }
+
+
+criticalityMeasure <- function(network, nodeNames, s, adjMatrix, setPS, setPower) {
+  critMeasure <- blockSNE(network, nodeNames)
+  
+  colnames(critMeasure) <- c("set", "setSize", "successors", "predecessors", "noSucc", "noPred", "criticality", "criticalityMeasure")
+  
+  return(critMeasure)
+  
+}
