@@ -20,4 +20,6 @@ egalitarianTrade <- function(N, learningEffectX, learningEffectY, autarky, cost,
   U <- data.frame(agents = seq(1:N),
                   utility = rep(0, N))
   
+  
+  
 }

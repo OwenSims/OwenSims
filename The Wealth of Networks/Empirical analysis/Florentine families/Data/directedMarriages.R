@@ -41,6 +41,3 @@ N <- data.frame(number = seq(from = 1,
 
 network <- data.frame(sources = sources,
                       targets = targets)
-
-sourceNames <- numberToName(nodeNumbers = sources,
-                            nodeNames = N)
