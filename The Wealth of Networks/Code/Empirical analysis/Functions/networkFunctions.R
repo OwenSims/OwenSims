@@ -469,7 +469,7 @@ blockSNE <- function(network, nodeNames, c, s, adjMatrix, setPS, setPower) {
     c <- 0
   }
   
-  setPower$powerCapita <- setPower$powerCapita - (c * (setPower$setSize) - 1)
+  setPower$powerCapita <- setPower$powerCapita - (c * (setPower$setSize - 1))
   setPower <- subset(setPower, setPower$powerCapita > 0)
   setPower <- setPower[order(-setPower$powerCapita), ]
   
