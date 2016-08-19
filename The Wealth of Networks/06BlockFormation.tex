@@ -168,7 +168,7 @@ Let $D$ be a (weakly) connected directed network on $N$. Then $\mathcal{B} (D) \
 \end{equation}
 \end{theorem}
 \begin{proof}
-Let $B \subset N$ be some arbitrary node set. From its definition we deduce that for $B$ to be a critical set between two nodes $i,j \in N$, $i \neq j$, it must be that for all $i,j \notin B \colon B \cap W_{ij}(D) \neq \varnothing$ for every $W_{ij}(D) \in \mathcal{W}_{ij}(D)$. 
+Let $B \subset N$ be some arbitrary node set. From its definition we deduce that for $B$ to be a critical set between two nodes $i,j \in N$, $i \neq j$, it must be that for all $i,j \notin B \colon B \cap W_{ij}(D) \neq \varnothing$ for every $W_{ij}(D) \in \mathcal{W}_{ij}(D)$.
 \\[1ex]
 \textbf{Only if:} Suppose to the contrary that $\min \left\{ \# W_{ij} \mid W_{ij} \in \mathcal{W}_{ij}(D) \right\} = 2$. This is the case where $j \in S_{i}(D)$ and, thus, $i \in P_{j}(D)$. Let $W^{\min}_{ij} \in \arg\min \left\{ \# W_{ij} \mid W_{ij} \in \mathcal{W}_{ij}(D) \right\}$ be a geodesic path from $i$ to $j$. Clearly, $\# W^{\min}_{ij}(D) = 2$ implies that $W_{ij}^{\min} \setminus \{i,j\} = \varnothing$. Therefore, $\cap \mathcal{W}_{ij} (D) \setminus \{ i,j \} = \varnothing$ meaning that both there are no nodes to form a critical set for $i$ and $j$.
 \\[1ex]
@@ -331,7 +331,7 @@ for every critical set $B \in \mathcal{B} (D)$. It assigns the per-capita number
 \begin{equation}
 \beta'_D (B) = \# \Delta_D (B) .
 \end{equation}
-The \emph{brokerage measure} is introduced as the function $\beta_D \colon \mathcal{B}(D) \to \mathbb{Q}$, which assigns to every critical set $B \in \mathcal{B} (D)$ 
+The \emph{brokerage measure} is introduced as the function $\beta_D \colon \mathcal{B}(D) \to \mathbb{Q}$, which assigns to every critical set $B \in \mathcal{B} (D)$
 \begin{equation} \label{eq:brokerage}
 \beta_D (B) = \frac{\# \Delta_D (B)}{\# B}
 \end{equation}
@@ -364,7 +364,7 @@ We define a $\sigma$-\textbf{block structure} as a finite collection $\mathcal{P
 \begin{itemize}
 \item[(i)] Select
 \[
-B^1 \in \arg\max \left\{ \, \sigma (B) \, \middle| \, B \in \mathcal{B} (D) \, \right\} 
+B^1 \in \arg\max \left\{ \, \sigma (B) \, \middle| \, B \in \mathcal{B} (D) \, \right\}
 \]
 and define
 \[
@@ -454,7 +454,7 @@ There is direct relationship between such a block formation process and the crea
 
 The formation of a block requires consent from all members. As such the block formation game described is considered to be an augmented version of \citeauthor{Myerson1991}'s network formation game \cite[see][page 448]{Myerson1991}. We argue that this is the most natural format to describe the process of block formation: If there exists no consent between players then the block becomes dysfunctional and its exploitive properties are nullified. Some characteristics from \citeauthor{Myerson1991}'s game remain, however by implementing the game on an existing network some new characteristics are observed. Specifically we note that individual beliefs and expectations can be formed from knowledge of the network's topology which leads to more convincing self-confirming equilibria \citep{GillesSarangi2010}.
 
-\subsubsection*{Block formation games}
+\subsubsection{Block formation games}
 
 Let $D$ be some network on node set $N$ and let $\sigma_D \colon \mathcal{B} (D) \to \mathbb{R}$ be some intermediation measure that assigns every critical set a commonly accepted measurement of its control power in the network $D$. Also, introduce $c \geqslant 0$ be a cost parameter. Formally, the corresponding \textbf{block formation game} is now introduced as a strategic form game $G (D, \sigma_D ,c ) = (N,S, \pi )$ where $N$ is the set of nodes, interpreted as the set of decision makers or ``players''; $S = (S_1, \ldots ,S_n )$ is an assignment of a strategy set to every player $i \in N = \{ 1, \ldots ,n \}$; and $\pi \colon \prod_{i \in N} S_i \to \mathbb{R}^N$ is a game-theoretic payoff function that assigns to every strategy tuple $s = (s_1, \ldots ,s_n)$ a payoff vector $\pi (s) = (\pi_1 (s), \ldots ,\pi_n (s))$ such that the following holds:
 \begin{itemize}
@@ -522,7 +522,7 @@ The formation of a critical set $B \in \mathcal{B} (D) \setminus \mathcal{M} (D)
 \\
 If there is no $j \in B \colon \sigma_D (\{ j \}) > \sigma_D (B) - (\# B -1)c$, then player $i$ will have no incentive to exploit her own position unless there is some $j \in B$ such that $s_{j} \neq B$ and $c > 0$. In either case $B$ will not form in a Nash equilibrium.
 \\
-This implies assertion (iv) and completes the proof of the theorem. 
+This implies assertion (iv) and completes the proof of the theorem.
 \end{proof}
 
 \subsection{Stability in the formation of block structures}
@@ -591,7 +591,7 @@ Next consider the case that $\beta_D (\{ i \}) = \# \Delta_D (i) < \beta_D (B) -
 Hence, in the block formation game $G (D, \beta_d ,c)$, the coalition $B-i$ provides a strictly higher payoff than the coalition $B$ for its member nodes. Therefore, $B$ can never be resulting in a strong Nash equilibrium in the block formation game. This shows the assertion.
 \end{proof}
 
-\subsubsection*{An illustrative example}
+\subsubsection{An illustrative example}
 
 Consider network $D$ on node set $N=\{1,2,3,4,5,6,7\}$ originally shown in Figure~\ref{Net1}. Players $2$, $5$, and $6$ are middlemen and there exists $66$ distinct critical sets. However, only $3$ of these critical sets are non-redundant in the sense of Theorem \ref{thm:beta-block}.
 
@@ -629,11 +629,11 @@ There exists a unique strong Nash equilibrium in $G (D, \beta_D ,c)$ in which th
 There exist multiple Nash equilibria (NE) in $G (D, \beta_D ,c)$. Without going through all different combinations of these equilibria we can instead note that the only critical sets that can form in a Nash equilibrium are the following: $B = \{2,3\}$, $B' = \{4,5\}$, $B'' = \{2,5\}$ for $c \leqslant 0.5$; and $B''' = \{2,3,4\}$ for $c=0$. Block $B''$ is notable as it consists of middlemen only. Block $B'''$ is notable as it is non-redundant and still stable in the resulting Nash equilibria.
 
 \item[For $\mathbf{c = 1}$:]
-There exist four strong Nash equilibria: 
+There exist four strong Nash equilibria:
 \begin{itemize}
-\item[(1)] The partitioning $\langle \{ 1 \} , \{2,3\} , \{4,5\} , \{ 6 \} , \{ 7 \} \rangle$; 
-\item[(2)] An SNE resulting in the partitioning $\langle \{ 1 \} , \{2,3\} , \{4 \}, \{5\} , \{ 6 \} , \{ 7 \} \rangle$; 
-\item[(3)] An SNE resulting in the partitioning $\langle \{ 1 \} , \{2\} , \{3\} , \{4,5\} , \{ 6 \} , \{ 7 \} \rangle$; and 
+\item[(1)] The partitioning $\langle \{ 1 \} , \{2,3\} , \{4,5\} , \{ 6 \} , \{ 7 \} \rangle$;
+\item[(2)] An SNE resulting in the partitioning $\langle \{ 1 \} , \{2,3\} , \{4 \}, \{5\} , \{ 6 \} , \{ 7 \} \rangle$;
+\item[(3)] An SNE resulting in the partitioning $\langle \{ 1 \} , \{2\} , \{3\} , \{4,5\} , \{ 6 \} , \{ 7 \} \rangle$; and
 \item[(4)] An SNE that results in the trivial non-cooperation equilibrium in which all nodes act solitary given by $\langle \{ 1 \} , \{ 2\} ,\{ 3\} , \{ 4 \} , \{ 5 \} , \{ 6 \} , \{ 7 \} \rangle$.
 \end{itemize}
 In this case the set of Nash equilibria in $G (D, \beta_D ,c)$ are equal to the set of SNE. Indeed, only two blocks are stable in NE: $B=\{2,3\}$ and $B'=\{4,5\}$. Obviously the situation in which all agents exploit their own network position is also a NE.
@@ -659,15 +659,25 @@ This naturally introduces the coverage and brokerage centrality measures $\overl
 
 Furthermore, the intermediation measure $\sigma_D$ induces a collection of $\sigma_D$--blocks denoted by $\widehat{\mathcal{B}} (\sigma_D) \subset \mathcal{B} (D)$. This naturally leads to a brokerage centrality measure that is restricted to these blocks:
 \begin{equation}
-\widehat{\beta}_i (D) = \sum_{B \in \widehat{\mathcal{B}}_i (D)} \beta_D (B) =  \sum_{B \in \widehat{\mathcal{B}}_i (D)} \frac{\# \Delta_D (B)}{\# B}
+\widehat{\rho}_i (D) = \sum_{B \in \widehat{\mathcal{B}}_i (D)} \rho_D (B) =  \sum_{B \in \widehat{\mathcal{B}}_i (D)} \frac{\# \Delta_D (B)}{\# B}
 \end{equation}
 Here, as before, $\widehat{\mathcal{B}}_i (D)$ denotes the collection of $\sigma_D$--blocks that $i \in N$ is a member of.
 
-Finally, for completeness, we introduce a centrality measure founded on the collection of non-redundant critical sets $\widetilde{\mathcal{B}} (D) \subset \mathcal{B} (D)$. Similar as above, we define
+For completeness, we introduce a normalisation of the centrality measure $\widehat{\rho}_i (D)$ above, founded on the collection of non-redundant critical sets $\widetilde{\mathcal{B}} (D) \subset \mathcal{B} (D)$. Thus, we define
 \begin{equation}
-\widetilde{\beta}_i (D) = \frac{1}{\widetilde{S} (\sigma_D)} \sum_{B \in \widetilde{\mathcal{B}}_i (D)} \beta_D (B) \quad \mbox{where } \widetilde{S} (\sigma_D) = \sum_{B \in \widetilde{\mathcal{B}} (D)} \beta_D (B) .
+\overline{\rho}_i (D) = \frac{1}{\widetilde{S} (\sigma_D)} \sum_{B \in \widetilde{\mathcal{B}}_i (D)} \rho_D (B) \quad \mbox{where } \widetilde{S} (\sigma_D) = \sum_{B \in \widetilde{\mathcal{B}} (D)} \rho_D (B) .
 \end{equation}
-We apply these centrality measures to analyse different directed networks. First, we show through application to the Florentine elite network that the centrality brokerage measure based on non-redundant critical sets is actually redundant.
+We apply these centrality measures to analyse different directed networks. Before doing so we provide an overview as to the circumstances in which to use the aformentioned centrality measures. After this, we show through application to the Florentine elite network that the centrality brokerage measure based on non-redundant critical sets is actually redundant.
+
+\subsection{Applying centrality measures}
+
+Through the game theoretical development of block formation we provided three normalised centrality measures defined on a set of nodes. These set centrality measures referred to coverage centrality ($\overline{\gamma}$), brokerage centrality ($\overline{\beta}$) and criticality (\overline{\rho}). All of these centrality measures are similar in that they are explicitly derived from the set of walks that the nodes are positioned on; however, they measure different aspects of nodes within the network.
+
+First, coverage centrality
+
+Second, brokerage centrality is a measurement that summises all of a given nodes opportunities to broker information and trade within the network. Thus, regardless of whether a node is a middleman, a non-middleman intermediary, a source, or a sink they can potentially have an individual brokerage centrality of above zero. This is because nodes can form blocks within the network; this measure analyses the blocks regardless of whether they were to rationally form under any condition. Each nodes ability to broker flows within a networked system therefore depends both on their individual position, and the position of other nodes within the networked environment.
+
+Finally, criticallity is only defined on the blocks that exist within some Strong Nash Equilibrium. As a consequence, fewer nodes within the network will have a criticality above zero. Sources, sinks and isolated singletons will have a criticality of exactly zero. This filtering of important nodes provides a more precise indication of the most important sets of nodes. This is particularly prevalent ...
 
 \subsection{The Florentine elite network: A further analysis}
 
@@ -738,7 +748,7 @@ Over time the average number of connections per node in the social network incre
 & \multicolumn{4}{c}{Terrorist network} \\[1ex]
 Statistic	& Jan 1999 & Dec 2000 & May 2001 & August 2001 \\
 \midrule
-Size ($n$)  & 27	& 31	& 31 & 32	 \\ 
+Size ($n$)  & 27	& 31	& 31 & 32	 \\
 \# of links & 62 & 82 & 99 & 127 \\
 \# of components	& 4 & 2 & 1 & 1 \\
 \# of communities & 6 & 5 & 3 & 3 \\
