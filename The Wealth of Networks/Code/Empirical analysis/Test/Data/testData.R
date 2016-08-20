@@ -17,12 +17,15 @@ N <- data.frame(number = seq(from = 1,
 network <- data.frame(sources = sources,
                       targets = targets)
 
-g <- plot(graph_from_data_frame(network, 
-                                directed = TRUE),
-          vertex.label.dist = 1.5,
-          vertex.size = 10,
-          edge.color = "gray50", 
-          vertex.color = "orange")
+isTrue <- isUndirected(network, N) == FALSE
+
+plot(graph_from_data_frame(network,
+                           directed = isTrue),
+     vertex.color = "orange",
+     vertex.label.dist = 3,
+     vertex.size = 20,
+     edge.color = "gray50",
+     edge.arrow.size = 0.5)
 
 
 

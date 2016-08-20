@@ -227,11 +227,15 @@ potentialBrokerage <- function(network, nodeNames, adjMatrix) {
 }
 
 
-middlemanPower <- function(network, nodeNames, adjMatrix) {
+middlemanPower <- function(network, nodeNames, adjMatrix, normalised) {
   if (missing(adjMatrix)) {
     originalAdjMatrix <- adjMatrix <- adjacenyMatrix(network, nodeNames)
   } else {
     originalAdjMatrix <- adjMatrix
+  }
+  
+  if(missing(normalised)) {
+    normalised <- FALSE
   }
   
   PS <- predecessorsSuccessors(network = network, 
@@ -247,11 +251,15 @@ middlemanPower <- function(network, nodeNames, adjMatrix) {
     power[i] <- K - kappa - PS$noPred[i] - PS$noSucc[i]
   }
   
-  potBroker <- potentialBrokerage(network, 
-                                  nodeNames)
-  power <- round(power/as.integer(potBroker), 
-                 digits = 3)
+  if (normalised == TRUE) {
+    potBroker <- potentialBrokerage(network, 
+                                    nodeNames)
+    power <- round(power/as.integer(potBroker), 
+                   digits = 3)
+  }
+  
   return(power)
+  
 }
 
 
@@ -287,12 +295,16 @@ middlemanPowerDetail <- function(network, nodeNames, adjMatrix) {
   power <- middlemanPower(network, 
                           nodeNames, 
                           adjMatrix)
+  normPower <- round(power/as.integer(potentialBrokerage(network, 
+                                                         nodeNames)),
+                     digits = 3)
   type <- strongWeak(network, 
                      nodeNames, 
                      adjMatrix)
   details <- data.frame(number = nodeNames[, 1], 
                         name = nodeNames[, 2], 
                         power = power, 
+                        normPower = normPower,
                         type = type)
   return(details)
 }
