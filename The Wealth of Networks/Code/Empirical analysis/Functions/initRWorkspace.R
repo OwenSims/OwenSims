@@ -1,6 +1,7 @@
 installRLibraries <- function() {
   libraries <- c("data.table",
-                 "expm")
+                 "expm",
+                 "igraph")
   
   newLibraries <-
     libraries[!(libraries %in% installed.packages()[, "Package"])]
@@ -17,7 +18,8 @@ initRWorkspace <- function() {
   installRLibraries()
   
   libraries <- c("data.table",
-                 "expm")
+                 "expm",
+                 "igraph")
   
   catch <- capture.output(lapply(libraries,
          library,
