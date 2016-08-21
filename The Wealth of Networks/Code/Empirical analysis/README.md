@@ -10,8 +10,9 @@ Consider the directed network in `testData1.R`. The network contains 7 nodes--on
 
 ### 2.1 Middlemen and middleman power
 
-It is pretty obvious from reviewing this network that nodes 2, 5, and 6 are all middlemen. Furthermore, it is noticeable that node 6 would still remain a middleman regardless of whether the network were transformed into its undirected state. We get the following values when running the `middlemanPowerDetail` function.
+It is pretty obvious from reviewing this network that nodes 2, 5, and 6 are all middlemen. Furthermore, it is noticeable that node 6 would still remain a middleman regardless of whether the network were transformed into its undirected state. We get the following values when running the `middlemanPowerDetail()` function.
 
+	> middlemanPowerDetail(network, N)
 	number name power normPower        type
 	1    1     0       0.0    Non-middleman
 	2    2     1       0.1   Weak middleman
@@ -35,6 +36,8 @@ As hypothesised we find that nodes 2 and 5 are both weak middlemen and node 6 is
 
 In this case, the network is plotted such that middlemen are coloured in red and non-middlemen are coloured in blue. This is seen in the Figure below.
 
+![alt text](Test/Images/middlemen.png "Middlemen highlighted")
+
 
 ### 2.2 Block coverage and middleman power
 
@@ -48,11 +51,11 @@ We can analyse sets of nodes from the functions developed in `networkFunctions.R
 	4:         4       1         6,7          1,2      2      2        4
 	5:         5       1         6,7        1,2,3      2      3        6
 	---                                                                  
-	115: 2,3,4,5,7       5           6          1,6      1      2        1
-	116: 2,3,4,6,7       5           5          1,5      1      2        1
-	117: 2,3,5,6,7       5           4          1,4      1      2        1
-	118: 2,4,5,6,7       5                      1,3      0      2        0
-	119: 3,4,5,6,7       5                      1,2      0      2        0
+	115: 2,3,4,5,7     5           6          1,6      1      2        1
+	116: 2,3,4,6,7     5           5          1,5      1      2        1
+	117: 2,3,5,6,7     5           4          1,4      1      2        1
+	118: 2,4,5,6,7     5                      1,3      0      2        0
+	119: 3,4,5,6,7     5                      1,2      0      2        0
 
 The brokerage, or middleman power, of each node set can be derived in much the same way. By executing the `blockPower()` function we arrive at the following output:
 
@@ -64,11 +67,11 @@ The brokerage, or middleman power, of each node set can be derived in much the s
 	4:         4       1         6,7          1,2      2      2     0
 	5:         5       1         6,7        1,2,3      2      3     2
 	---                                                               
-	115: 2,3,4,5,7       5           6          1,6      1      2     1
-	116: 2,3,4,6,7       5           5          1,5      1      2     1
-	117: 2,3,5,6,7       5           4          1,4      1      2     1
-	118: 2,4,5,6,7       5                      1,3      0      2     0
-	119: 3,4,5,6,7       5                      1,2      0      2     0
+	115: 2,3,4,5,7     5           6          1,6      1      2     1
+	116: 2,3,4,6,7     5           5          1,5      1      2     1
+	117: 2,3,5,6,7     5           4          1,4      1      2     1
+	118: 2,4,5,6,7     5                      1,3      0      2     0
+	119: 3,4,5,6,7     5                      1,2      0      2     0
 
 We can see that a positive coverage does not translate to a positive middleman power. More specifically, the middleman power of a node set is defined on the critical sets of the network. All critical sets are provided with the function `criticalSets()`. The output for the 7 node network is as below:
 
@@ -80,11 +83,11 @@ We can see that a positive coverage does not translate to a positive middleman p
 	4:       1,5       2  2,3,4,6,7          2,3      5      2     2       1.000
 	5:       1,6       2  2,3,4,5,7      2,3,4,5      5      4     4       2.000
 	---
-	62: 1,3,4,5,7       5        2,6          2,6      2      2     1       0.200
-	63: 2,3,4,5,6       5          7            1      1      1     1       0.200
-	64: 2,3,4,5,7       5          6          1,6      1      2     1       0.200
-	65: 2,3,4,6,7       5          5          1,5      1      2     1       0.200
-	66: 2,3,5,6,7       5          4          1,4      1      2     1       0.200
+	62: 1,3,4,5,7      5        2,6          2,6      2      2     1       0.200
+	63: 2,3,4,5,6      5          7            1      1      1     1       0.200
+	64: 2,3,4,5,7      5          6          1,6      1      2     1       0.200
+	65: 2,3,4,6,7      5          5          1,5      1      2     1       0.200
+	66: 2,3,5,6,7      5          4          1,4      1      2     1       0.200
 
 This function also provides the middleman power per capita, used in Chapter 6 of the monograph.
 
@@ -127,3 +130,8 @@ A number of other functions are defined in `networkFunctions.R`. For example, th
 		   vertex.size = 5,
 		   edge.color = "gray50",
 		   edge.arrow.size = 0)
+
+
+This provides the following graph
+
+![alt text](Test/Images/erdosRenyi50.png "Random graph of 50 nodes with p = 0.05")
