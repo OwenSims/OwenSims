@@ -1,14 +1,26 @@
 ## 1 About
 
-This directory provides algorithms that correspond to centrality measures discussed in Chapters 5, 6 and 7 of the monograph. In particular, these measures calculate the middleman position, the brokerage, the coverage and criticality of individual and sets of nodes. These measurements are based on game theoretic concepts--such as Strong Nash Equilibrium--which are also contained in the functions. The algorithms are written, and therefore executable, in the R statistical programming language and follow the formulae and mathematics within the monograph.
+This directory provides algorithms that correspond to centrality measures discussed in Chapters 5, 6 and 7 of the monograph. In particular, these measures calculate the middleman position, the brokerage, the coverage and criticality of individual and sets of nodes. These measurements are based on game theoretic concepts--such as Strong Nash Equilibrium--which are also contained in the functions. The algorithms are written, and therefore executable, in the R statistical programming language and follow the mathematics within the monograph.
 
 These directories also contain empirical and synthetic data; some of which is also used within the monograph. This is supplied to allow for testing the centrality measures. 
 
-## 2 Examples
+## 2 Real-world data
 
-Consider the directed network in `testData1.R`. The network contains 7 nodes--one of which is a source and another is a sink--and 8 arcs that can be interpreted as the flow of information, money, or economic goods: node 1 is connected to node 7 through the intermediation of other nodes in the network. The network of relationships is plotted in the Figure below.
+Within this repository we are happy to publicly provide three network datasets used within the monograph. The first network dataset is the elite marriage network of Renaissance Florence, which has been used in various representations in a number of network-oriented academic articles. The data was originally sourced from Padgett and Ansell (1994). The static network consists of 32 families and 31 arcs, meaning that a number of families are singletons. Arguably these nodes could be disregarded from the analysis.
 
-### 2.1 Middlemen and middleman power
+![Elite Florentine marriages](Florentine families/Images/marriageTopology.png "Elite Florentine marriages")
+
+The second network dataset is the manager advice network gathered by David Krackhardt (1987). This directed network contains 21 managers from 4 different levels of management and also contains 129 arcs between the managers.
+
+The third dataset refers to four different networks that show the evolution of the interactions between terrorists that coordinated and instigated the 9/11 terrorists attacks. These networks span from December 1999 to August 2001, just before the attack. The size of the network increases over time from 27 terrorists in December 1999 to 32 terrorists in August 2001. The network also becomes more concentrated over time. These networks have been constructed from a number of different sources within academic literature, government reports and journalist articles.
+
+## 3 Synthetic data
+
+Consider the directed network in `testData1.R`. Load the data into your workspace environment by sourcing the relevant file: `source("~/path/to/file/testData1.R")`.
+
+The network contains 7 nodes--one of which is a source and another is a sink--and 8 arcs that can be interpreted as the flow of information, money, or economic goods: node 1 is connected to node 7 through the intermediation of other nodes in the network. The network of relationships is plotted in the Figure below.
+
+### 3.1 Middlemen and middleman power
 
 It is pretty obvious from reviewing this network that nodes 2, 5, and 6 are all middlemen. Furthermore, it is noticeable that node 6 would still remain a middleman regardless of whether the network were transformed into its undirected state. We get the following values when running the `middlemanPowerDetail()` function.
 
@@ -36,10 +48,9 @@ As hypothesised we find that nodes 2 and 5 are both weak middlemen and node 6 is
 
 In this case, the network is plotted such that middlemen are coloured in red and non-middlemen are coloured in blue. This is seen in the Figure below.
 
-![alt text](Test/Images/middlemen.png "Middlemen highlighted")
+![Highlighted middlemen](Test/Images/middlemen.png "Highlighted middlemen")
 
-
-### 2.2 Block coverage and middleman power
+### 3.2 Coverage, blocks and set middleman power
 
 We can analyse sets of nodes from the functions developed in `networkFunctions.R`. Again, these functions align with the measures developed in the monograph; of particular interest is Chapter 6. An overview of the coverage of each node set in the network can be found with the `coverage()` function. Specifically, the coverage of the 7 node network is given by:
 
@@ -91,7 +102,7 @@ We can see that a positive coverage does not translate to a positive middleman p
 
 This function also provides the middleman power per capita, used in Chapter 6 of the monograph.
 
-### 2.3 Criticality
+### 3.3 Criticality
 
 A further measure developed within the monograph is that of criticality. The criticality of individual or sets of nodes is a measure of their assumed brokerage after they have been allowed the ability to form coalitions and actively broker relations. It is therefore a measure based on the resulting stable sets. Within the monograph we use the notion of Strong Nash Equilibrium to determine the stability of a coalition within a network. Each network also has some cost of formation; this cost function can also be determined within the model itself.
 
@@ -116,7 +127,7 @@ The criticality of individual nodes can be calculated from all potential Strong 
 	> nodeNormCriticality(network, N)
 	[1] 0.0 0.2 0.2 0.3 0.3 0.5 0.0
 
-## 3 Other functions
+## 4 Other functions
 
 A number of other functions are defined in `networkFunctions.R`. For example, the `randomGraph()` function provides an Erdos-Renyi graph where the probability of an arc or link existing between any two nodes is explicitly defined within the argument `0 < p < 1`.
 
@@ -134,4 +145,4 @@ A number of other functions are defined in `networkFunctions.R`. For example, th
 
 This provides the following graph
 
-![alt text](Test/Images/erdosRenyi50.png "Random graph of 50 nodes with p = 0.05")
+![Random graph of 50 nodes with p = 0.05](Test/Images/erdosRenyi50.png "Random graph of 50 nodes with p = 0.05")
