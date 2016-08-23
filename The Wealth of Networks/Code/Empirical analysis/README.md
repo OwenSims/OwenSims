@@ -1,6 +1,6 @@
 ## 1 About
 
-This directory provides algorithms that correspond to centrality measures discussed in Chapters 5, 6 and 7 of the monograph. In particular, these measures calculate the middleman position, the brokerage, the coverage and criticality of individual and sets of nodes. These measurements are based on game theoretic concepts--such as Strong Nash Equilibrium--which are also contained in the functions. The algorithms are written, and therefore executable, in the R statistical programming language and follow the mathematics within the monograph.
+This directory provides algorithms that correspond to centrality measures discussed in Chapters 5, 6 and 7 of the monograph. In particular, these measures calculate the middleman position, the brokerage, the coverage and criticality of individual and sets of nodes. These measurements are based on game theoretic concepts--such as Strong Nash Equilibrium--which are also contained in the functions. The algorithms are written, and therefore executable, in the `R` statistical programming language and follow the mathematics within the monograph.
 
 These directories also contain empirical and synthetic data; some of which is also used within the monograph. This is supplied to allow for testing the centrality measures. 
 
@@ -25,14 +25,14 @@ The network contains 7 nodes--one of which is a source and another is a sink--an
 It is pretty obvious from reviewing this network that nodes 2, 5, and 6 are all middlemen. Furthermore, it is noticeable that node 6 would still remain a middleman regardless of whether the network were transformed into its undirected state. We get the following values when running the `middlemanPowerDetail()` function.
 
 	> middlemanPowerDetail(network, N)
-	number name power normPower        type
-	1    1     0       0.0    Non-middleman
-	2    2     1       0.1   Weak middleman
-	3    3     0       0.0    Non-middleman
-	4    4     0       0.0    Non-middleman
-	5    5     2       0.2   Weak middleman
-	6    6     5       0.5 Strong middleman
-	7    7     0       0.0    Non-middleman
+	number name power normPower        		type
+		 1    1     0       0.0    Non-middleman
+		 2    2     1       0.1   Weak middleman
+		 3    3     0       0.0    Non-middleman
+		 4    4     0       0.0    Non-middleman
+		 5    5     2       0.2   Weak middleman
+		 6    6     5       0.5 Strong middleman
+		 7    7     0       0.0    Non-middleman
 
 As hypothesised we find that nodes 2 and 5 are both weak middlemen and node 6 is a strong middleman. To add to this we also find : (a) the number of relationships brokered by all middleman, and (b) the normalised middleman power for each node. We can represent middlemen visually with the following R commands:
 

@@ -1,0 +1,21 @@
+## 1 About
+
+This directory contains a set of LaTeX files which, when compiled into a PDF, is my PhD thesis for Queen's Management School. We provide an abstract of the thesis immediately below, but the short synopsis is that this thesis provides an analysis of entrepreneurship within a network-institutional framework of the economy. We term the theory of the economy developed in the thesis as the **relational perspective**. In investigating entrepreneurship and entrepreneurial activities within the relational perspective we develop a set of tools to analyse empirical data.
+
+Most of the statistical tools developed are also contained within this directory. So too are the empirical and synthetic data used throughout the thesis. Below we provide the thesis abstract and instructions for compiling the TeX files.
+
+### 1.1 Abstract
+
+We quote the abstract directly from the thesis.
+
+> Academic economists and economic practitioners have recognised the need for a pragmatic reform of the economics discipline, particularly since the impact of the 2008 global financial crisis. Many also recognise the requirement for a cohesive perspective on issues regarding the entrepreneur and entrepreneurship within a micro- and macroeconomic framework. This monograph addresses--and contributes a potential resolve to---both issues. In doing so we provide an insight into the methodological basis of a _relational perspective_ of social and economic activity through the structure and evolution of the social division of labour propagated by the actions of entrepreneurs. Of specific interest is the emergence of new specialisations, the modification of institutions, the generation of wealth and exploitation of positional power by entrepreneurial leaders.
+>
+> Theoretical development of the relational perspective is founded on a number of axioms and hypotheses derived from observations in economics, sociology, psychology, and evolutionary anthropology. From this, we elaborate, in a formal manner, on the inherent sociality of the individual economic agent and the production possibilities that are subjected to increasing returns to specialisation. The structure of each individuals' production set facilitates the specialisation into a set of professions, or socio-economic roles, that become embedded within the institutional fabric of society. Interaction infrastructures form as a consequence of the social and economic interaction between economic agents.
+>
+> The formation interaction infrastructures lead to an uneven distribution of positional power within the matrix of relationships. Unique positional attributes of economic agents are reflected in entrepreneurial action and the exploitation of power in connecting, and potentially disconnecting, otherwise unconnected agents and communities. We investigate entrepreneurship in this way---through an institutional and topological perspective. Specifically, entrepreneurship motivates the evolution of the division of labour through the formation of new socio-economic roles; this, in turn, suggests an alteration of networked institutional infrastructure and the formation of unique positions in the matrix occupied by entrepreneurs.
+>
+> Throughout the monograph we justify the claim that entrepreneurs can be represented as middlemen within a network-institutional perspective of economic activity. This is investigated further in both a philosophical and formal manner. We develop a set of statistical tools to investigate the positional power of middlemen and apply the resulting measures to situations of disruptive entrepreneurial activity. Empirical applications include the elite Florentine marriage network of Renaissance Florence, the network of 9/11 terrorists and the interlocking directorate network of New York City during the early twentieth century. By providing a new perspective and analytics this empirical analysis provides a new insight into cases within economic history literature.
+
+## 2 Compiling the Thesis
+
+You must have a LaTeX executable installed on your system. The entire thesis can be compiled by compiling the TeX body file `00WealthOfNetworks.tex` as normal. This body file pulls in all Parts and Chapters of the thesis.
