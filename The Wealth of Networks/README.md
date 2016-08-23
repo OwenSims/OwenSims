@@ -36,7 +36,7 @@ The monograph provides a number of theoretical and empirical contributions to th
 
 ## 2 Compiling the monograph
 
-You must have a LaTeX executable installed on your system. The entire monograph can be generated and translated into a PDF format by compiling the TeX body file `00WealthOfNetworks.tex` as normal. This body file pulls in all Parts and Chapters of the monograph, which are written as separate TeX files.
+The latest PDF should have already been compiled and uploaded to the repository. If the latest PDF has not been compiled, or to make changes and compile yourself, you first must have a LaTeX executable installed on your system. The entire monograph can be generated and translated into a PDF format by compiling the TeX body file `00WealthOfNetworks.tex` as normal. This body file pulls in all Parts and Chapters of the monograph, which are written as separate TeX files.
 
 ## 3 Contact
 

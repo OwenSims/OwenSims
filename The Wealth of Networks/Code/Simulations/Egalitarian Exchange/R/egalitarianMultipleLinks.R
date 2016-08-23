@@ -20,6 +20,23 @@ egalitarianTrade <- function(N, learningEffectX, learningEffectY, autarky, cost,
   U <- data.frame(agents = seq(1:N),
                   utility = rep(0, N))
   
+  g <- data.frame(sources = NA,
+                  targets = NA)
+  
+  for (i in 2:N) {
+    
+    consumptionX <- consumptionY <- matrix(0L,
+                                           nrow = N,
+                                           ncol = length(roles))
+    
+    utility <- rbind(matrix(0L,
+                            nrow = N,
+                            ncol = length(roles)),
+                     c(roles))
+    
+    
+  }
+  
   
   
 }
