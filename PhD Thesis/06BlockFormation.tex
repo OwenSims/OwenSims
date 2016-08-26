@@ -657,11 +657,11 @@ Now, an intermediation measure $\sigma_D \colon \mathcal{B} (D) \to \mathbb{R}$ 
 \end{equation}
 This naturally introduces the coverage and brokerage centrality measures $\overline{\gamma}$ and $\overline{\beta}$, respectively, derive from the coverage intermediation measure $\gamma_D$ and the brokerage intermediation measure $\beta_D$, respectively.
 
-Furthermore, the intermediation measure $\sigma_D$ induces a collection of $\sigma_D$--blocks denoted by $\widehat{\mathcal{B}} (\sigma_D) \subset \mathcal{B} (D)$. This naturally leads to a brokerage centrality measure that is restricted to these blocks:
+Furthermore, the intermediation measure $\sigma_D$ induces a collection of $\sigma_D$-blocks denoted by $\widehat{\mathcal{B}} (\sigma_D) \subset \mathcal{B} (D)$. This naturally leads to a brokerage centrality measure that is restricted to these blocks:
 \begin{equation}
 \widehat{\rho}_i (D) = \sum_{B \in \widehat{\mathcal{B}}_i (D)} \rho_D (B) =  \sum_{B \in \widehat{\mathcal{B}}_i (D)} \frac{\# \Delta_D (B)}{\# B} .
 \end{equation}
-Here, as before, $\widehat{\mathcal{B}}_i (D)$ denotes the collection of $\sigma_D$--blocks that $i \in N$ is a member of.
+Here, as before, $\widehat{\mathcal{B}}_i (D)$ denotes the collection of $\sigma_D$-blocks that $i \in N$ is a member of.
 
 For completeness, we introduce a normalisation of the centrality measure $\widehat{\rho}_i (D)$ above, founded on the collection of non-redundant critical sets $\widetilde{\mathcal{B}} (D) \subset \mathcal{B} (D)$. Thus, we define
 \begin{equation}
@@ -687,25 +687,42 @@ The results of the brokerage and criticality of all Families and banking Houses 
 
 \begin{table}[h]
 \begin{center}
-\begin{tabular}{llcccc}
+\begin{tabular}{lcccc}
 \toprule
-House & Faction & $\overline{\gamma}_{i}$ & $\overline{\beta}_{i}$ & $\overline{\rho}_{i}$ & $\widehat{\rho}_{i}$ \\
+House & Faction & $\overline{\gamma} (i)$ & $\overline{\beta} (i)$ & $\overline{\rho} (i)$ & $\widehat{\rho} (i)$ \\
 \midrule
-Medici  & Medician   & 0.043  & 0.482  & 0.210  & 68  \\
-Pazzi  & Medician  & 0.085  & 0.000  & 0.000 & 0   \\
-Salviati  & Medician   & 0.050 	 & 0.415  & 0.211 & 12    \\
-Acciaiuol   & Medician   & 0.068  & 0.000  & 0.000 & 0     \\
-Tournabuon & Medician   & 0.073  & 0.391 & 0.108 & 22    \\
-Ridolfi  & Medician   & 0.061 	& 0.412 & 0.180  & 48    \\
-Ginori  & Medician   & 0.086  & 0.000  & 0.000 & 0     \\
-Albizzi  & Oligarchic & 0.088  & 0.401 & 0.175  & 22    \\
-Barbadori & Oligarchic & 0.053  & 0.000 & 0.000  & 0     \\
-Castellan & Oligarchic & 0.049  & 0.380  & 0.135   & 10    \\
-Strozzi & Oligarchic & 0.061 	& 0.409   & 0.224  & 43    \\
-Peruzzi  & Oligarchic & 0.063 	 & 0.375  & 0.072  & 9     \\
-Bischeri  & Oligarchic & 0.087  & 0.400 & 0.236  & 37    \\
-Guadagni  & Oligarchic & 0.049  & 0.439  & 0.268 	 & 49    \\
-Lambertes  & Oligarchic & 0.077  & 0.000  & 0.000  & 0   \\
+Albizzi(**)		& Oligarch 	& 0.381 & 0.166 & 0.428 & 104	\\
+Aldobrandini	& Oligarch 	& 0.112 & 0.012 & 0.000 & 0		\\
+Altoviti		& Oligarch 	& 0.129 & 0.008 & 0.000 & 0		\\
+Baroncelli		& Oligarch 	& 0.112 & 0.012 & 0.000 & 0		\\
+Benizzi			& Oligarch 	& 0.101 & 0.004 & 0.000 & 0		\\
+Bisheri 		& Oligarch 	& 0.123 & 0.006 & 0.000 & 0		\\
+Castellani(**)	& Oligarch 	& 0.242 & 0.071 & 0.358 & 87	\\
+Cocco-Donati  	& Medician 	& 0.129 & 0.004 & 0.000 & 0		\\
+Da Uzzano  		& Oligarch 	& 0.165 & 0.024 & 0.000 & 0		\\
+Dall'Antella 	& Medician 	& 0.138 & 0.031 & 0.000 & 0		\\
+Davanzati   	& Medician 	& 0.157 & 0.010 & 0.000 & 0		\\
+Della Casa  	& Oligarch 	& 0.213 & 0.001 & 0.066 & 16	\\
+Dietisalvi 		& Medician 	& 0.198 & 0.020 & 0.000 & 0		\\
+Fioravanti  	& Medician 	& 0.157 & 0.010 & 0.000 & 0		\\
+Ginori(**)  	& Medician 	& 0.320 & 0.094 & 0.292 & 71	\\
+Guadagni(**)  	& Oligarch 	& 0.285 & 0.059 & 0.099 & 24	\\
+Guicciardini 	& Medician 	& 0.157 & 0.031 & 0.000 & 0		\\
+Lamberteschi	& Oligarch 	& 0.112 & 0.012 & 0.000 & 0		\\
+Medici(**)   	& Medician 	& 0.301 & 0.307 & 0.395 & 94	\\
+Orlandini  		& Medician 	& 0.129 & 0.004 & 0.000 & 0		\\
+Panciatichi 	& Oligarch 	& 0.219 & 0.005 & 0.189 & 46	\\
+Pazzi(**)   	& Medician 	& 0.360 & 0.263 & 0.770 & 187	\\
+Pepi        	& Oligarch 	& 0.201 & 0.011 & 0.000 & 0		\\
+Peruzzi(*)  	& Oligarch 	& 0.271 & 0.082 & 0.374 & 91	\\
+Rondinelli(*) 	& Oligarch 	& 0.263 & 0.064 & 0.272 & 66	\\
+Rucellai     	& Oligarch 	& 0.178 & 0.009 & 0.000 & 0		\\
+Scambrilla 		& Oligarch 	& 0.201 & 0.011 & 0.000 & 0		\\
+Solosmei    	& Oligarch 	& 0.112 & 0.012 & 0.000 & 0		\\
+Strozzi(**) 	& Oligarch 	& 0.326 & 0.173 & 0.580 & 141	\\
+Tornabuoni   	& Medician 	& 0.181 & 0.017 & 0.000 & 0		\\
+Valori     		& Medician 	& 0.157 & 0.010 & 0.000 & 0		\\
+Velluti     	& Oligarch 	& 0.112 & 0.012 & 0.000 & 0		\\	\hline
 \bottomrule
 \end{tabular}
 \end{center}
@@ -713,15 +730,15 @@ Lambertes  & Oligarchic & 0.077  & 0.000  & 0.000  & 0   \\
 \label{table:florentineElite}
 \end{table}
 
-There are a total of $32,474$ potential critical sets in this network which can potentially form, most of these include sources and sinks, though. There result a total of 1,020 critical sets consisting of intermediaries only. Only 36 of these critical sets are non-redundant.
+There are a total of $32,474$ critical sets in this network that can potentially form, most of these include sources and sinks, though. There result a total of $1,020$ critical sets consisting of intermediaries only. Only $36$ of these critical sets are non-redundant.
 
-From the table there emerges that the Medici family have the largest brokerage centrality $\overline{\beta}$ relative to all other Florentine families. This is specifically because of their substantial middleman position in the network and the size of their membership of critical sets: The total number of critical sets that they are members of, is 512. The Guadagni, Salviati and Ridolfi houses have brokerage scores close to that of the Medici's. These were obviously important families during this time and participate in as many critical sets as the Medici. However, we note that the Tournabuon and Albizzi families are only seen as modestly important with respect to the brokerage measure, despite the families forming the unique non-singleton block in the network. We note that all sources and sinks of the directed marriage network attain a brokerage score of 0 and will, as such, never be the member of a block.
+From the table we find that the Medici family have the largest brokerage centrality $\overline{\beta}$ relative to all other Florentine families. This is specifically because of their substantial middleman position in the network and the number of critical sets that they are members of. The total number of which is $512$. The Albizzi, Strozzi and Peruzzi houses have brokerage scores close to that of the Medici's. These were obviously important families during this time and participate in as many critical sets as the Medici. However, we note that the Castellani and Albizzi families are only seen as modestly important with respect to the brokerage measure, despite the families forming the unique non-singleton block in the network. We note that all sources, sinks and singletons of the directed marriage network attain a criticality score of $0$ and will, as such, never be the member of a block.
 
-Surprisingly, the coverage centrality $\overline{\gamma}$ as well as the non-redundant brokerage centrality $\widetilde{\beta}$ measures of the Medici are diminished relative to the same measures of all other houses in the network. The family is ranked as fifth highest according to the non-redundant brokerage centrality measure $\widetilde{\beta}$ and even lower according to the coverage centrality measure $\overline{\gamma}$. This can be explained specifically due to their prominence of the House of Medici as a \emph{middleman}. They only participate in 4 non-redundant critical sets specifically as a consequence of their powerful middleman position in the network. Indeed, any critical set that the Medici are a member of, becomes redundant because the Medici could achieve a superior payoff by operating independently. Thus, as a consequence of this middleman power, for any critical set that the House of Medici is a member of, there always exists a subset that contains the Medici family and has a superior brokerage than the initial critical set. These two centrality measures give a higher value to houses that have a less substantial middleman positions and are in many more (non-redundant) critical sets, such as the Guadagni, Bischeri and Strozzi families.
+Surprisingly, the coverage centrality $\overline{\gamma}$ as well as the criticality $\overline{\rho}$ measures of the Medici are diminished relative to the same measures of all other houses in the network. The family is ranked as fifth highest according to the criticality measure and even lower according to the coverage centrality measure $\overline{\gamma}$. This can be explained specifically due to their prominence of the House of Medici as a middleman. They only participate in 4 non-redundant critical sets specifically as a consequence of their powerful middleman position in the network. Indeed, any critical set that the Medici are a member of, becomes redundant because the Medici could achieve a superior payoff by operating independently. Thus, as a consequence of this middleman power, for any critical set that the House of Medici is a member of, there always exists a subset that contains the Medici family and has a superior brokerage than the initial critical set. These two centrality measures give a higher value to houses that have a less substantial middleman positions and are in many more (non-redundant) critical sets, such as the Guadagni, Bischeri and Strozzi families.
 
-Finally, despite the large number of blocks in the network there exists a brokerage block structure whereby all families exploit their own position apart from the Albizzi and the Tournabuon who form the unique non-trivial $\beta$--block. Unfortunately, however, both families are in opposing factions and there exists no direct relationship between the families. It should be noted, though, that the families formed a relationship during the prolonged fall of the Medici. As the legacy of the \textit{Pazzi Conspiracy} became ingrained into the Florentine elite and the Medici began to lose their stronghold in Florence, families between factions became connected through marital ties. One such marriage was between the house of Albizzi and the house of Tournabuon as Giovanna degli Albizzi married to Lorenzo Tornabuoni. The Albizzi family were at the centre of the Oligarchic faction and the main family to rival the Medici. As the Medici's power declined the members of the Albizzi family began to befriend members of the Medici family and took some of the roles of the Medici when they were banished from Florence. Indeed, Luca Albizzi became the \textit{Gonfalonier of Justice} and later remained a key ally of the Medici.
+Finally, despite the large number of blocks in the network there exists a brokerage block structure whereby all families exploit their own position apart from the Albizzi and the Tournabuon who form the unique non-trivial $\beta$-block. Unfortunately, however, both families are in opposing factions and there exists no direct relationship between the families. It should be noted, though, that the families formed a relationship during the prolonged fall of the Medici. As the legacy of the \textit{Pazzi Conspiracy} became ingrained into the Florentine elite and the Medici began to lose their stronghold in Florence, families between factions became connected through marital ties. One such marriage was between the house of Albizzi and the house of Tournabuon as Giovanna degli Albizzi married to Lorenzo Tornabuoni. The Albizzi family were at the centre of the Oligarchic faction and the main family to rival the Medici. As the Medici's power declined the members of the Albizzi family began to befriend members of the Medici family and took some of the roles of the Medici when they were banished from Florence. Indeed, Luca Albizzi became the \textit{Gonfalonier of Justice} and later remained a key ally of the Medici.
 
-We conclude that the coverage centrality measure $\overline{\gamma}$ as well as the non-redundant brokerage centrality measure $\widetilde{\beta}$ are less descriptive than the brokerage centrality measure $\overline{\beta}$ and the $\beta$--block centrality measure $\widehat{\beta}$. The following analysis of the 9/11 terrorist network is therefore restricted to those two measures.
+We conclude that the coverage centrality measure $\overline{\gamma}$ as well as the non-redundant brokerage centrality measure $\widetilde{\beta}$ are less descriptive than the brokerage centrality measure $\overline{\beta}$ and the $\beta$-block centrality measure $\widehat{\beta}$. The following analysis of the 9/11 terrorist network is therefore restricted to those two measures.
 
 \subsection{The 9/11 terrorist networks}
 
@@ -748,19 +765,19 @@ Over time the average number of connections per node in the social network incre
 \begin{tabular}{lcccc}
 \toprule
 & \multicolumn{4}{c}{Terrorist network} \\[1ex]
-Statistic	& Jan 1999 & Dec 2000 & May 2001 & August 2001 \\
+Statistic			& Jan 1999 	& Dec 2000 	& May 2001 	& August 2001 	\\
 \midrule
-Size ($n$)  & 27	& 31	& 31 & 32	 \\
-\# of links & 62 & 82 & 99 & 127 \\
-\# of components	& 4 & 2 & 1 & 1 \\
-\# of communities & 6 & 5 & 3 & 3 \\
-Avg. degree  & 4.593  & 5.290 & 6.392 & 8.000 \\
-Avg. path length & 2.332	 & 2.510 & 2.283 & 1.991 \\
-Effective diameter & 4 & 5 & 4 & 4 \\
-Density & 0.183 & 0.171 & 0.214 & 0.253 \\
-Modularity  & 0.463  & 0.472 & 0.430 & 0.362 \\
-Critical sets  & 589,709 & 886,772 & 1,109,989 & 1,181,994	\\
-$\beta$-blocks & 27 & 168 & 217 & 68 \\
+Size ($n$)  		& 27		& 31		& 31 		& 32			\\
+\# of links 		& 62 		& 82 		& 99 		& 127 			\\
+\# of components  	& 4 		& 2 		& 1 		& 1 			\\
+\# of communities 	& 6 		& 5 		& 3 		& 3 			\\
+Avg. degree  	  	& 4.593  	& 5.290 	& 6.392 	& 8.000 		\\
+Avg. path length 	& 2.332	 	& 2.510 	& 2.283 	& 1.991 		\\
+Effective diameter 	& 4 		& 5 		& 4 		& 4 			\\
+Density 			& 0.183 	& 0.171 	& 0.214 	& 0.253 		\\
+Modularity  		& 0.463  	& 0.472 	& 0.430 	& 0.362 		\\
+Critical sets  		& 589,709 	& 886,772 	& 1,109,989 & 1,181,994		\\
+$\sigma$-blocks 	& 27 		& 168 		& 217 		& 68			\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -852,37 +869,37 @@ The network diagrams regarding the evolution of the 9/11 terrorist network is gi
 \midrule
 Name  & $\overline{\beta}(i)$ & $\widetilde{\beta}(i)$ & $\overline{\beta}(i)$ & $\widetilde{\beta}(i)$ & $\overline{\beta}(i)$  & $\widetilde{\beta}(i)$ & $\overline{\beta}(i)$ & $\widetilde{\beta}(i)$ & $\overline{\beta}(i)$ & $\widetilde{\beta}(i)$ \\
 \midrule
-Ahmed Al-Haznawi       & 0.195     & 0.000       & 0.198     & 0.000       & 0.181     & 0.000        & 0.183     & 0.058       & 0.189            & 0.015             \\
-Ahmed Alghamdi         & 0.388     & 0.422       & 0.224     & 0.323       & 0.221     & 0.508        & 0.185     & 0.237       & 0.255            & 0.373              \\
-Ahmed Alnami           & 0.191     & 0.000       & 0.202     & 0.043       & 0.241     & 0.264        & 0.250     & 0.327       & 0.221            & 0.159              \\
-Bandar Alhazmi         & 0.219     & 0.407       & 0.175     & 0.000       & 0.118     & 0.000        & 0.109     & 0.000       & 0.155            & 0.102              \\
-Hamza Alghamdi         & 0.200     & 0.063       & 0.510     & 0.448       & 0.278     & 0.445        & 0.252     & 0.510       & 0.310            & 0.367             \\
+Ahmed Al-Haznawi       & 0.195     & 0.000       & 0.198     & 0.000       & 0.181     & 0.000        & 0.183     & 0.058       & 0.189            & 0.015            \\
+Ahmed Alghamdi         & 0.388     & 0.422       & 0.224     & 0.323       & 0.221     & 0.508        & 0.185     & 0.237       & 0.255            & 0.373            \\
+Ahmed Alnami           & 0.191     & 0.000       & 0.202     & 0.043       & 0.241     & 0.264        & 0.250     & 0.327       & 0.221            & 0.159            \\
+Bandar Alhazmi         & 0.219     & 0.407       & 0.175     & 0.000       & 0.118     & 0.000        & 0.109     & 0.000       & 0.155            & 0.102            \\
+Hamza Alghamdi         & 0.200     & 0.063       & 0.510     & 0.448       & 0.278     & 0.445        & 0.252     & 0.510       & 0.310            & 0.367            \\
 Hani Hanjour           & 0.219     & 0.407       & 0.392     & 0.350       & 0.751     & 0.456        & 0.851     & 0.500       & 0.553            & 0.428            \\
-Khalid Al-Mihdhar      & 0.172     & 0.000       & 0.254     & 0.273       & 0.244     & 0.406        & 0.250     & 0.230       & 0.230            & 0.227              \\
-Mamoun Darkazanli      & 0.202     & 0.000       & 0.201     & 0.000       & 0.182     & 0.000        & 0.183     & 0.000       & 0.192            & 0.000               \\
+Khalid Al-Mihdhar      & 0.172     & 0.000       & 0.254     & 0.273       & 0.244     & 0.406        & 0.250     & 0.230       & 0.230            & 0.227            \\
+Mamoun Darkazanli      & 0.202     & 0.000       & 0.201     & 0.000       & 0.182     & 0.000        & 0.183     & 0.000       & 0.192            & 0.000            \\
 Marwan Al-Shehhi       & 0.202     & 0.003       & 0.213     & 0.228       & 0.201     & 0.142        & 0.184     & 0.384       & 0.200            & 0.189            \\
 Mohamed Atta           & 0.226     & 0.229       & 0.232     & 0.571       & 0.203     & 0.312        & 0.184     & 0.500       & 0.211            & 0.403            \\
-Mounir El Motassadeq   & 0.202     & 0.003       & 0.201     & 0.011       & 0.182     & 0.008        & 0.183     & 0.023       & 0.192            & 0.011              \\
-Mustafa Al-Hisawi      & 0.219     & 0.407       & 0.223     & 0.164       & 0.237     & 0.203        & 0.194     & 0.225       & 0.218            & 0.250              \\
-Nabil Al-Marabh        & 0.219     & 0.407       & 0.175     & 0.000       & 0.189     & 0.102        & 0.185     & 0.180       & 0.192            & 0.172             \\
+Mounir El Motassadeq   & 0.202     & 0.003       & 0.201     & 0.011       & 0.182     & 0.008        & 0.183     & 0.023       & 0.192            & 0.011            \\
+Mustafa Al-Hisawi      & 0.219     & 0.407       & 0.223     & 0.164       & 0.237     & 0.203        & 0.194     & 0.225       & 0.218            & 0.250            \\
+Nabil Al-Marabh        & 0.219     & 0.407       & 0.175     & 0.000       & 0.189     & 0.102        & 0.185     & 0.180       & 0.192            & 0.172            \\
 Nawaf Al-Hazmi         & 0.563     & 0.405       & 0.403     & 0.444       & 0.264     & 0.600        & 0.250     & 0.257       & 0.370            & 0.427            \\
-Raed Hijazi            & 0.219     & 0.407       & 0.175     & 0.000       & 0.179     & 0.028        & 0.183     & 0.000       & 0.189            & 0.109              \\
-Ramzi Bin Al-Shibh     & 0.226     & 0.226       & 0.225     & 0.500       & 0.186     & 0.214        & 0.195     & 0.515       & 0.208            & 0.364              \\
-Rayed Abdullah         & 0.219     & 0.407       & 0.175     & 0.000       & 0.118     & 0.000        & 0.109     & 0.000       & 0.155            & 0.102              \\
+Raed Hijazi            & 0.219     & 0.407       & 0.175     & 0.000       & 0.179     & 0.028        & 0.183     & 0.000       & 0.189            & 0.109            \\
+Ramzi Bin Al-Shibh     & 0.226     & 0.226       & 0.225     & 0.500       & 0.186     & 0.214        & 0.195     & 0.515       & 0.208            & 0.364            \\
+Rayed Abdullah         & 0.219     & 0.407       & 0.175     & 0.000       & 0.118     & 0.000        & 0.109     & 0.000       & 0.155            & 0.102            \\
 Saeed Alghamdi         & 0.221     & 0.124       & 0.228     & 0.366       & 0.195     & 0.236        & 0.183     & 0.084       & 0.207            & 0.203            \\
-Said Bahaji            & 0.226     & 0.229       & 0.215     & 0.312       & 0.185     & 0.168        & 0.184     & 0.221       & 0.203            & 0.233             \\
-Salem Alhazmi          & 0.172     & 0.000       & 0.196     & 0.000       & 0.183     & 0.093        & 0.183     & 0.042       & 0.184            & 0.034             \\
-Wail Alshehri          & 0.171     & 0.000       & 0.198     & 0.000       & 0.183     & 0.057        & 0.183     & 0.023       & 0.184            & 0.020             \\
+Said Bahaji            & 0.226     & 0.229       & 0.215     & 0.312       & 0.185     & 0.168        & 0.184     & 0.221       & 0.203            & 0.233            \\
+Salem Alhazmi          & 0.172     & 0.000       & 0.196     & 0.000       & 0.183     & 0.093        & 0.183     & 0.042       & 0.184            & 0.034            \\
+Wail Alshehri          & 0.171     & 0.000       & 0.198     & 0.000       & 0.183     & 0.057        & 0.183     & 0.023       & 0.184            & 0.020            \\
 Waleed Al-Shehri       & 0.492     & 0.439       & 0.346     & 0.288       & 0.205     & 0.264        & 0.183     & 0.163       & 0.307            & 0.289            \\
-Zacarias Moussaoui     & 0.219     & 0.407       & 0.201     & 0.107       & 0.169     & 0.000        & 0.181     & 0.000       & 0.193            & 0.129             \\
-Zakariya Essabar       & 0.202     & 0.003       & 0.201     & 0.011       & 0.182     & 0.008        & 0.183     & 0.023       & 0.192            & 0.011              \\
-Ziad Jarrah            & 0.202     & 0.003       & 0.201     & 0.011       & 0.189     & 0.237        & 0.184     & 0.332       & 0.194            & 0.146              \\
-KSM                    & 0.397     & 0.261       & 0.251     & 0.468       & 0.262     & 0.429        & 0.195     & 0.372       & 0.276            & 0.383             \\
-Mohammed Haydar Zammar & 0.202     & 0.000       & 0.201     & 0.000       & 0.182     & 0.000        & 0.183     & 0.000       & 0.192            & 0.000               \\
-Mohand Alshehri        & --        & --          & 0.000     & 0.000       & 0.171     & 0.000        & 0.170     & 0.000       & 0.085            & 0.000               \\
-Satam Al-Suqami        & --        & --          & 0.000     & 0.000       & 0.232     & 0.578        & 0.185     & 0.271       & 0.104            & 0.212             \\
-Majed Moqed            & --        & --          & 0.000     & 0.000       & 0.182     & 0.054        & 0.183     & 0.000       & 0.091            & 0.014               \\
-Osama Awadallah        & --        & --          & 0.196     & 0.000       & 0.171     & 0.000        & 0.170     & 0.000       & 0.134            & 0.000               \\
+Zacarias Moussaoui     & 0.219     & 0.407       & 0.201     & 0.107       & 0.169     & 0.000        & 0.181     & 0.000       & 0.193            & 0.129            \\
+Zakariya Essabar       & 0.202     & 0.003       & 0.201     & 0.011       & 0.182     & 0.008        & 0.183     & 0.023       & 0.192            & 0.011            \\
+Ziad Jarrah            & 0.202     & 0.003       & 0.201     & 0.011       & 0.189     & 0.237        & 0.184     & 0.332       & 0.194            & 0.146            \\
+KSM                    & 0.397     & 0.261       & 0.251     & 0.468       & 0.262     & 0.429        & 0.195     & 0.372       & 0.276            & 0.383            \\
+Mohammed Haydar Zammar & 0.202     & 0.000       & 0.201     & 0.000       & 0.182     & 0.000        & 0.183     & 0.000       & 0.192            & 0.000            \\
+Mohand Alshehri        & --        & --          & 0.000     & 0.000       & 0.171     & 0.000        & 0.170     & 0.000       & 0.085            & 0.000            \\
+Satam Al-Suqami        & --        & --          & 0.000     & 0.000       & 0.232     & 0.578        & 0.185     & 0.271       & 0.104            & 0.212            \\
+Majed Moqed            & --        & --          & 0.000     & 0.000       & 0.182     & 0.054        & 0.183     & 0.000       & 0.091            & 0.014            \\
+Osama Awadallah        & --        & --          & 0.196     & 0.000       & 0.171     & 0.000        & 0.170     & 0.000       & 0.134            & 0.000            \\
 Fayez Banihammad       & --        & --          & --        & --          & --        & --           & 0.183     & 0.099       & 0.046            & 0.025            \\
 \bottomrule
 \end{tabular}

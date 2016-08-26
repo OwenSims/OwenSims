@@ -516,6 +516,8 @@ blockPower <- function(network, nodeNames, s, adjMatrix, setPS, perCapita) {
   if (perCapita == TRUE) {
     setPS$powerCapita <- round(setPS$power/setPS$setSize,
                                digits = 3)
+  } else {
+    setPS$powerCapita <- setPS$power
   }
 
   return(setPS)
@@ -613,15 +615,19 @@ criticalityMeasure <- function(network, nodeNames, s, adjMatrix, setPS, setPower
 
 
 # \overline{\beta}_i
-nodeSetBrokerage <- function(network, nodeNames, s, adjMatrix, setPS, setPower) {
+nodeSetBrokerage <- function(network, nodeNames, s, perCapita, adjMatrix, setPS, setPower) {
   if (missing(s)) {
     s <- nrow(nodeNames) - 2
+  }
+
+  if (missing(perCapita)) {
+    perCapita <- TRUE
   }
 
   setBrokerage <- blockPower(network,
                              nodeNames,
                              s,
-                             perCapita = TRUE)
+                             perCapita = perCapita)
   nodeSetBrokerage <- 0
 
   for (i in 1:nrow(nodeNames)) {
@@ -630,6 +636,9 @@ nodeSetBrokerage <- function(network, nodeNames, s, adjMatrix, setPS, setPower) 
     s <- s[t, ]
     nodeSetBrokerage[i] <- sum(s$powerCapita)
   }
+
+  nodeSetBrokerage <- round(nodeSetBrokerage/sum(setBrokerage$powerCapita),
+                            digits = 3)
 
   return(nodeSetBrokerage)
 }
