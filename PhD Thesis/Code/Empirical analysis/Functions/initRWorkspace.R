@@ -1,6 +1,7 @@
 installRLibraries <- function() {
   libraries <- c("data.table",
                  "expm",
+                 "ggplot2",
                  "igraph")
 
   newLibraries <-
@@ -19,6 +20,7 @@ initRWorkspace <- function() {
 
   libraries <- c("data.table",
                  "expm",
+                 "ggplot2",
                  "igraph")
 
   catch <- capture.output(lapply(libraries,

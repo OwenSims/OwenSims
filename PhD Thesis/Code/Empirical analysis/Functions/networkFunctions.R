@@ -159,6 +159,21 @@ degree <- function(network, nodeNames) {
 }
 
 
+degreeDistribution <- function(network, nodeNames) {
+  deg <- degree(network, nodeNames)
+  degDistPlot <- ggplot(deg,
+                        aes(x = deg$degree)) +
+    geom_histogram(aes(fill = ..count..),
+                   binwidth = 0.5,
+                   alpha = 0.75) +
+    labs(title = "Degree distribution",
+         x = "Degree",
+         y = "Count") +
+    theme(legend.position = "none")
+  return(degDistPlot)
+}
+
+
 connectivity <- function(network, nodeNames, adjMatrix) {
   if (missing(adjMatrix)) {
     adjMatrix <- adjacenyMatrix(network,

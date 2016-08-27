@@ -4,7 +4,9 @@ This directory provides algorithms that correspond to centrality measures discus
 
 These directories also contain empirical and synthetic data; some of which is also used within the monograph. This is supplied to allow for testing the centrality measures. 
 
-## 2 Real-world data
+## 2 Networks
+
+### 2.1 Real-world data
 
 Within this repository we are happy to publicly provide three network datasets used within the monograph. The first network dataset is the elite marriage network of Renaissance Florence, which has been used in various representations in a number of network-oriented academic articles. The data was originally sourced from Padgett and Ansell (1994). The static network consists of 32 families and 31 arcs, meaning that a number of families are singletons. Arguably these nodes could be disregarded from the analysis.
 
@@ -14,13 +16,13 @@ The second network dataset is the manager advice network gathered by David Krack
 
 The third dataset refers to four different networks that show the evolution of the interactions between terrorists that coordinated and instigated the 9/11 terrorists attacks. These networks span from December 1999 to August 2001, just before the attack. The size of the network increases over time from 27 terrorists in December 1999 to 32 terrorists in August 2001. The network also becomes more concentrated over time. These networks have been constructed from a number of different sources within academic literature, government reports and journalist articles.
 
-## 3 Synthetic data
+### 2.2 Synthetic data
 
 Consider the directed network in `testData1.R`. Load the data into your workspace environment by sourcing the relevant file: `source("~/path/to/file/testData1.R")`.
 
 The network contains 7 nodes--one of which is a source and another is a sink--and 8 arcs that can be interpreted as the flow of information, money, or economic goods: node 1 is connected to node 7 through the intermediation of other nodes in the network. The network of relationships is plotted in the Figure below.
 
-### 3.1 Middlemen and middleman power
+#### 2.2.1 Middlemen and middleman power
 
 It is pretty obvious from reviewing this network that nodes 2, 5, and 6 are all middlemen. Furthermore, it is noticeable that node 6 would still remain a middleman regardless of whether the network were transformed into its undirected state. We get the following values when running the `middlemanPowerDetail()` function.
 
@@ -50,7 +52,7 @@ In this case, the network is plotted such that middlemen are coloured in red and
 
 ![Highlighted middlemen](Test/Images/middlemen.png "Highlighted middlemen")
 
-### 3.2 Coverage, blocks and set middleman power
+#### 2.2.2 Coverage, blocks and set middleman power
 
 We can analyse sets of nodes from the functions developed in `networkFunctions.R`. Again, these functions align with the measures developed in the monograph; of particular interest is Chapter 6. An overview of the coverage of each node set in the network can be found with the `coverage()` function. Specifically, the coverage of the 7 node network is given by:
 
@@ -102,7 +104,7 @@ We can see that a positive coverage does not translate to a positive middleman p
 
 This function also provides the middleman power per capita, used in Chapter 6 of the monograph.
 
-### 3.3 Criticality
+#### 2.2.3 Criticality
 
 A further measure developed within the monograph is that of criticality. The criticality of individual or sets of nodes is a measure of their assumed brokerage after they have been allowed the ability to form coalitions and actively broker relations. It is therefore a measure based on the resulting stable sets. Within the monograph we use the notion of Strong Nash Equilibrium to determine the stability of a coalition within a network. Each network also has some cost of formation; this cost function can also be determined within the model itself.
 
@@ -114,7 +116,7 @@ For example, when considering the network of 7 nodes when there exists no costs 
 	2: 4,5       2        6,7        1,2,3      2      3     6           3
 	3: 2,3       2    4,5,6,7            1      4      1     4           2
 
-Specifically, node 6 remains as a middleman and two blocks are formed: one containing nodes 4 and 5, and another containing nodes 2 and 3. All other nodes do not form a block and therefore earn a payoff of zero. If, however, there is some substantial cost of forming a block, then the Strong Nash equilibrium degenerates to the point where no blocks are formed and middlemen are the only nodes that earn a positive payoff. By setting c = 2 we get the following Strong Nash equilibrium
+Specifically, node 6 remains as a middleman and two blocks are formed: one containing nodes 4 and 5, and another containing nodes 2 and 3. All other nodes do not form a block and therefore earn a payoff of zero. If, however, there is some substantial cost of forming a block, then the Strong Nash equilibrium degenerates to the point where no blocks are formed and middlemen are the only nodes that earn a positive payoff. By setting `c = 2` we get the following Strong Nash equilibrium:
 
 	> blockSNE(network, N, c = 2)
 	   set setSize successors predecessors noSucc noPred power powerCapita
@@ -126,6 +128,16 @@ The criticality of individual nodes can be calculated from all potential Strong 
 
 	> nodeNormCriticality(network, N)
 	[1] 0.0 0.2 0.2 0.3 0.3 0.5 0.0
+
+## 3 Hypergraphs
+
+A set of functions for analysing hypergraphs is also provided. These functions revolve around the projection of hypergraphs into different network structures and the measurement of a nodes' or an affiiations' "control" within the hypergraph. This notion of control as a centrality measure is represented by the sigma score and beta measures within hypergraphs. These are discussed in Chapter 7 of the monograph.
+
+It is important to understand the structure of the hypergraph data that needs to be passed to the functions. Following example `hypergraphData1.R` should help with this. Data is structured such that a bipartite network is expressed: `nodes` are connected to `affiliations` by an edge, however a set of nodes nor a set of affiliations are connected to each other directly.
+
+### 3.1 Aspectual hypergraphs
+
+Affiliations within a hypergraph can be associated within an "aspect". As such, an affiliation can be associated with one and only one affiliation. We consider these cases and discuss the analysis and formation of elite networks in aspectual hypergraphs.
 
 ## 4 Other functions
 
@@ -146,3 +158,7 @@ A number of other functions are defined in `networkFunctions.R`. For example, th
 This provides the following graph
 
 ![Random graph of 50 nodes with p = 0.05](Test/Images/erdosRenyi50.png "Random graph of 50 nodes with p = 0.05")
+
+The random nature of its formation is seen in the normally distributed degree distribution. We can form a plot of the degree distribution with the following function `degreeDistribution()`.
+
+![Degree distribution of random graph](Test/Images/randomDegreeDist.png "Degree distribution of random graph")
