@@ -18,7 +18,7 @@ The third dataset refers to four different networks that show the evolution of t
 
 ### 2.2 Synthetic data
 
-Consider the directed network in `testData1.R`. Load the data into your workspace environment by sourcing the relevant file: `source("~/path/to/file/testData1.R")`.
+Consider the directed network in `networkData1.R`. Load the data into your workspace environment by sourcing the relevant file: `source("~/path/to/file/networkData1.R")`.
 
 The network contains 7 nodes--one of which is a source and another is a sink--and 8 arcs that can be interpreted as the flow of information, money, or economic goods: node 1 is connected to node 7 through the intermediation of other nodes in the network. The network of relationships is plotted in the Figure below.
 

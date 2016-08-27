@@ -10,4 +10,4 @@ Blog Date(s) | Title(s) | Directory
 ---|---------|-------------
 March 28, 2016 | [Visualising the elite marriage network of Renaissance Florence](http://www.owensims.co.uk/wordpress/uncategorized/visualising-the-elite-marriage-network-of-renaissance-florence/) | `Florentine Families`
 March 27, 2016 | [The directorates of the Empire State](http://www.owensims.co.uk/wordpress/uncategorized/visualising-the-elite-marriage-network-of-renaissance-florence/) | `New York Directors`
-July 31, 2016 | The Wealth of Networks | `The Wealth of Networks`
+July 31, 2016 | Entrepreneurship and Wealth Generation in Socially Structured Economies | `PhD Thesis`

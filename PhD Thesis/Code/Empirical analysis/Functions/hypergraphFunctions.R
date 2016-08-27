@@ -113,6 +113,7 @@ sigmaScoreAffiliation <- function(hypergraph, nodeNames, affiliationNames, weigh
   }
 
   sigma <- affiliationMembership <- 0
+  activeAffiliations <- unique(hypergraph[, 2])
   affiliationNetwork <- affiliationProjection(hypergraph)
   for (i in 1:length(unique(hypergraph[, 2]))) {
     affiliationMembership[activeAffiliations[i]] <- length(unique(subset(hypergraph[, 1],
@@ -136,10 +137,11 @@ sigmaScoreAffiliation <- function(hypergraph, nodeNames, affiliationNames, weigh
 sigmaScoreAffiliation <- function(hypergraph, nodeNames, affiliationNames, weights) {
   if (missing(weights)) {
     weights <- rep(1,
-                   nrow(affiliationNames))
+                   max(affiliationNames$number))
   }
 
   sigma <- affiliationMembership <- 0
+  activeAffiliations <- unique(hypergraph[, 2])
   affiliationNetwork <- affiliationProjection(hypergraph)
   for (i in 1:length(unique(hypergraph[, 2]))) {
     affiliationMembership[activeAffiliations[i]] <- length(unique(subset(hypergraph[, 1],
@@ -150,10 +152,12 @@ sigmaScoreAffiliation <- function(hypergraph, nodeNames, affiliationNames, weigh
     sigma[affiliationNames[i, 1]] <- weights[affiliationNames[i, 1]]
     subNetwork <- unique(subset(affiliationNetwork,
                                 affiliationNetwork[, 1] == affiliationNames[i, 1]))
-    neighbours <- subNetwork[, 2]
-    for (j in 1:length(neighbours)) {
-      sigma[affiliationNames[i, 1]] <-
-        sigma[affiliationNames[i, 1]] + (weights[neighbours[j]] * (subNetwork[j, 3]/affiliationMembership[neighbours[j]]))
+    if (nrow(subNetwork) > 0) {
+      neighbours <- subNetwork[, 2]
+      for (j in 1:length(neighbours)) {
+        sigma[affiliationNames[i, 1]] <-
+          sigma[affiliationNames[i, 1]] + (weights[neighbours[j]] * (subNetwork[j, 3]/max(affiliationMembership[neighbours[j]], 1)))
+      }
     }
   }
   return(sigma)
