@@ -2,25 +2,25 @@ installRLibraries <- function() {
   libraries <- c("data.table",
                  "expm",
                  "igraph")
-  
+
   newLibraries <-
     libraries[!(libraries %in% installed.packages()[, "Package"])]
-  
+
   if (length(newLibraries) > 0) {
     install.packages(newLibraries,
-                     repos = "http://cran.ma.imperial.ac.uk/")
-    
+                     repos = "https://cloud.r-project.org/")
+
   }
 }
 
 
 initRWorkspace <- function() {
   installRLibraries()
-  
+
   libraries <- c("data.table",
                  "expm",
                  "igraph")
-  
+
   catch <- capture.output(lapply(libraries,
          library,
          character.only = TRUE))
