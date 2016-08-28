@@ -65,6 +65,52 @@ filterNetwork <- function(network) {
   }
   row_sub <- apply(network, 1, function(row) all(row != 0))
   network <- network[row_sub, ]
+  return(network)
+}
+
+
+affiliationSet <- function(hypergraph, nodeNames) {
+  for (i in 1:nrow(nodeNames)) {
+    if (i == 1) {
+      affSet <- list(subset(hypergraph$affiliations,
+                            hypergraph$nodes == nodeNames[i, 1]))
+    } else {
+      affSet[nodeNames[i, 1]] <- list(subset(hypergraph$affiliations,
+                                             hypergraph$nodes == nodeNames[i, 1]))
+    }
+  }
+  return(affSet)
+}
+
+
+hypergraphNeighbourhood <- function(hypergraph, nodeNames) {
+  for (i in 1:nrow(nodeNames)) {
+    affSet <- subset(hypergraph$affiliations,
+                     hypergraph$nodes == nodeNames[i, 1])
+    if (length(affSet) > 0) {
+      for (j in 1:length(affSet)) {
+        members <- subset(hypergraph$nodes,
+                          hypergraph$affiliations == affSet[j])
+        if (j == 1) {
+          neighbours <- members
+        } else {
+          neighbours <- setdiff(union(neighbours, members),
+                               nodeNames[i, 1])
+        }
+      }
+    }
+    if (i == 1) {
+      neighbourhood <- list(neighbours)
+    } else {
+      neighbourhood[nodeNames[i, 1]] <- list(neighbours)
+    }
+  }
+  return(neighbourhood)
+}
+
+
+affiliationEnviornment <- function(hypergraph, affiliationNames) {
+  for 
 }
 
 
