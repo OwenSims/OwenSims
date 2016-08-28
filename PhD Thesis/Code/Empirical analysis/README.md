@@ -8,7 +8,7 @@ These directories also contain empirical and synthetic data; some of which is al
 
 ### 2.1 Real-world data
 
-Within this repository we are happy to publicly provide three network datasets used within the monograph. The first network dataset is the elite marriage network of Renaissance Florence, which has been used in various representations in a number of network-oriented academic articles. The data was originally sourced from Padgett and Ansell (1994). The static network consists of 32 families and 31 arcs, meaning that a number of families are singletons. Arguably these nodes could be disregarded from the analysis.
+Within this repository we are happy to publicly provide four empirical network datasets used within the monograph. The first network dataset is the elite marriage network of Renaissance Florence, which has been used in various representations in a number of network-oriented academic articles. The data was originally sourced from Padgett and Ansell (1994). The static network consists of 32 families and 31 arcs, meaning that a number of families are singletons. Arguably these nodes could be disregarded from the analysis.
 
 ![Elite Florentine marriages](Florentine families/Images/marriageTopology.png "Elite Florentine marriages")
 
@@ -16,9 +16,11 @@ The second network dataset is the manager advice network gathered by David Krack
 
 The third dataset refers to four different networks that show the evolution of the interactions between terrorists that coordinated and instigated the 9/11 terrorists attacks. These networks span from December 1999 to August 2001, just before the attack. The size of the network increases over time from 27 terrorists in December 1999 to 32 terrorists in August 2001. The network also becomes more concentrated over time. These networks have been constructed from a number of different sources within academic literature, government reports and journalist articles.
 
+The final dataset refers to a hypergraph representing the directorate of New York City in 1902. We provide a bipartite network of all railways, insurance, and financial institutions as well as their directors. The purpose of this data is to illustrate the control of directors and firms in New York during this time. This network contains over 250 unique firms and 3000 unique directors. There are 4299 links; each link indicates membership of a director to a firm. Since the number of links is greater than the number of unique directors it is certain that overlapping directorate exists. This network has been constructed from historical New York Times articles and the Directory of Directors of New York City. Other sources are used to acquire data on the valuation of each of the firms.
+
 ### 2.2 Synthetic data
 
-Consider the directed network in `networkData1.R`. Load the data into your workspace environment by sourcing the relevant file: `source("~/path/to/file/networkData1.R")`.
+Consider the directed network in `networkData1.R`. Load the data into your workspace environment by sourcing the relevant file: `source("~/path/to/networkData1.R")`.
 
 The network contains 7 nodes--one of which is a source and another is a sink--and 8 arcs that can be interpreted as the flow of information, money, or economic goods: node 1 is connected to node 7 through the intermediation of other nodes in the network. The network of relationships is plotted in the Figure below.
 
@@ -131,7 +133,22 @@ The criticality of individual nodes can be calculated from all potential Strong 
 
 ## 3 Hypergraphs
 
-A set of functions for analysing hypergraphs is also provided. These functions revolve around the projection of hypergraphs into different network structures and the measurement of a nodes' or an affiiations' "control" within the hypergraph. This notion of control as a centrality measure is represented by the sigma score and beta measures within hypergraphs. These are discussed in Chapter 7 of the monograph.
+A set of functions for analysing hypergraphs is also provided. These functions revolve around the projection of hypergraphs into different network structures and the measurement of a nodes' or an affiiations' "control" within the hypergraph. This notion of control as a centrality measure is represented by the sigma score and beta measures within hypergraphs. These are discussed in Chapter 7 of the monograph. Using the NYC Director data (`NYCDirectors.R`) we can illustrate an example of an affiliation projection of the directorate hypergraph. Consider the following code.
+
+    > source("~/path/to/NYCDirectors.R")
+    > projection <- filterNetwork(affiliationProjection(hypergraph))
+    > plot(graph_from_data_frame(projection,
+                           directed = FALSE),
+           vertex.color = types,
+           vertex.label = NA,
+           vertex.label.dist = 3,
+           vertex.label.color = "black",
+           vertex.size = log(valuations)/5,
+           edge.width = projection$weight,
+           edge.color = "grey50",
+           edge.arrow.size = 0)
+
+![Overlapping directorate network of NYC](NYC directors/Images/weightedInstitutions.png "Overlapping directorate network of NYC")
 
 It is important to understand the structure of the hypergraph data that needs to be passed to the functions. Following example `hypergraphData1.R` should help with this. Data is structured such that a bipartite network is expressed: `nodes` are connected to `affiliations` by an edge, however a set of nodes nor a set of affiliations are connected to each other directly.
 
