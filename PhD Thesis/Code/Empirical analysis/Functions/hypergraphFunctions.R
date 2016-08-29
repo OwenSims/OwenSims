@@ -110,7 +110,13 @@ hypergraphNeighbourhood <- function(hypergraph, nodeNames) {
 
 
 affiliationEnviornment <- function(hypergraph, affiliationNames) {
-  for 
+  for (i in 1:nrow(affiliationNames)) {
+    members <- subset(hypergraph$nodes,
+                      hypergraph$affiliations == affiliationNames[i, 1])
+    if (i == 1) {
+      
+    }
+  }
 }
 
 
