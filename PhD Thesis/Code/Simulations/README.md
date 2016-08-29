@@ -1,4 +1,4 @@
-# Simulating socio-economic growth and development
+# Simulating the growth and development of the socio-economic space
 
 ## 1 About
 

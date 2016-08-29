@@ -178,34 +178,6 @@ normSigmaScore <- function(hypergraph, nodeNames, affiliationNames, weights) {
 sigmaScoreAffiliation <- function(hypergraph, nodeNames, affiliationNames, weights) {
   if (missing(weights)) {
     weights <- rep(1,
-                   nrow(affiliationNames))
-  }
-
-  sigma <- affiliationMembership <- 0
-  activeAffiliations <- unique(hypergraph[, 2])
-  affiliationNetwork <- affiliationProjection(hypergraph)
-  for (i in 1:length(unique(hypergraph[, 2]))) {
-    affiliationMembership[activeAffiliations[i]] <- length(unique(subset(hypergraph[, 1],
-                                                                         hypergraph[, 2] == activeAffiliations[i])))
-  }
-
-  for (i in 1:nrow(affiliationNames)) {
-    sigma[affiliationNames[i, 1]] <- weights[affiliationNames[i, 1]]
-    subNetwork <- unique(subset(affiliationNetwork,
-                                affiliationNetwork[, 1] == affiliationNames[i, 1]))
-    neighbours <- subNetwork[, 2]
-    for (j in 1:length(neighbours)) {
-      sigma[affiliationNames[i, 1]] <-
-        sigma[affiliationNames[i, 1]] + (weights[neighbours[j]] * (subNetwork[j, 3]/affiliationMembership[neighbours[j]]))
-    }
-  }
-  return(sigma)
-}
-
-
-sigmaScoreAffiliation <- function(hypergraph, nodeNames, affiliationNames, weights) {
-  if (missing(weights)) {
-    weights <- rep(1,
                    max(affiliationNames$number))
   }
 
