@@ -1,3 +1,5 @@
+# Simulating socio-economic growth and development
+
 ## 1 About
 
 This directory provides algorithms that correspond to the simulations of the socio-economic space discussed in Chapter 3 of the monograph. The simulations are written, and therefore executable, in the `Matlab` programming language. As we continue with development we intend to gradually replace these `Matlab` scripts with `R` functions. This replacement will allow for easier reading, debugging and continual development.

@@ -28,4 +28,5 @@ initRWorkspace <- function() {
          character.only = TRUE))
 }
 
+
 # Remember to source(file = "~/path/to/initRWorkspace.R") and source(file = "~/path/to/networkFunctions.R")

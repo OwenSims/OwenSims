@@ -114,9 +114,26 @@ affiliationEnviornment <- function(hypergraph, affiliationNames) {
     members <- subset(hypergraph$nodes,
                       hypergraph$affiliations == affiliationNames[i, 1])
     if (i == 1) {
-      
+      membersList <- list(members)
+    } else {
+      membersList[affiliationNames[i, 1]] <- list(members)
     }
   }
+  for (i in 1:nrow(affiliationNames)) {
+    environment <- 0
+    for (j in setdiff(seq(1, nrow(affiliationNames)), i)) {
+      if (length(intersect(membersList[[i]], membersList[[j]])) > 0) {
+        environment <- c(environment,
+                         j)
+      }
+    }
+    if (i == 1) {
+      affEnviornment <- list(setdiff(environment, 0))
+    } else {
+      affEnviornment[affiliationNames[i, 1]] <- list(setdiff(environment, 0))
+    }
+  }
+  return(affEnviornment)
 }
 
 
@@ -223,6 +240,7 @@ externalInfluence <- function(hypergraph, nodeNames, affiliationNames, weights) 
   }
 
   external <- affiliationMembership <- 0
+  activeAffiliations <- unique(hypergraph[, 2])
   affiliationNetwork <- affiliationProjection(hypergraph)
   for (i in 1:length(unique(hypergraph[, 2]))) {
     affiliationMembership[activeAffiliations[i]] <- length(unique(subset(hypergraph[, 1],
@@ -234,10 +252,13 @@ externalInfluence <- function(hypergraph, nodeNames, affiliationNames, weights) 
     subNetwork <- unique(subset(affiliationNetwork,
                                 affiliationNetwork[, 1] == affiliationNames[i, 1]))
     neighbours <- subNetwork[, 2]
-    for (j in 1:length(neighbours)) {
-      external[affiliationNames[i, 1]] <-
-        external[affiliationNames[i, 1]] + (weights[neighbours[j]] * (subNetwork[j, 3]/affiliationMembership[neighbours[j]]))
+
+    if (length(neighbours) > 0) {
+      for (j in 1:length(neighbours)) {
+        external[affiliationNames[i, 1]] <- external[affiliationNames[i, 1]] + (weights[neighbours[j]] * (subNetwork[j, 3]/affiliationMembership[neighbours[j]]))
+      }
     }
   }
   return(external)
 }
+

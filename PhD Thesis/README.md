@@ -1,10 +1,10 @@
-## 1 Entrepreneurship and Wealth Generation in Socially Structured Economies
+# Entrepreneurship and Wealth Generation in Socially Structured Economies
 
-This directory contains a set of TeX files which, when compiled into a PDF, forms my PhD thesis for Queen's Management School. The thesis, perhaps better stated as a monograph, is entitled **Entrepreneurship and Wealth Generation in Socially Structured Economies**. It provides an analysis of entrepreneurship within a network-institutional framework of the economy. 
+## 1 About
 
-We term the holistic theory of the economy developed in the monograph _the relational perspective_. To investigate entrepreneurship and the entrepreneurial function within the relational perspective we create a theory of entrepreneurial activity, as well as a set of game-theoretic and statistical tools to analyse empirical data. We provide the abstract of the monograph in immediately below.
+This directory contains a set of TeX files which, when compiled into a PDF, forms my PhD thesis for Queen's Management School. The thesis, perhaps better stated as a monograph, is entitled **Entrepreneurship and Wealth Generation in Socially Structured Economies**. It provides an analysis of entrepreneurship within a network-institutional framework of the economy, which we term as the _relational perspective_. 
 
-Most of the statistical measures developed are also contained within this repository. So too are the empirical and synthetic data used throughout the monograph. Below we provide the monograph abstract and instructions for compiling the TeX files.
+In order to investigate entrepreneurship and the entrepreneurial function within the relational perspective we create a theory of entrepreneurial activity, as well as a set of game-theoretic and statistical tools to analyse empirical data. Most of the statistical measures developed are contained within this repository. So too are the empirical and synthetic data used throughout the monograph. Below we provide the monograph abstract and instructions for compiling the TeX files.
 
 The primary supervisor for this monograph is Professor Robert P. Gilles and the secondary supervisor is Dr. Graham Brownlow. Both supervisors are academic faculty members of Queen's Management School. I am immensely thankful to both of them for their guidance and encouragement.
 
@@ -24,20 +24,26 @@ This monograph develops and assesses the notion of entrepreneurship and the entr
 
 The monograph provides a number of theoretical and empirical contributions to the economics discipline.
 
-* We develop a relational perspective of economic activity. This is a perspective that stresses the social opportunities and constraints that derive from the embeddedness of economic agents within a networked system of governance.
+* We develop a relational perspective of economic activity. This is a perspective that stresses the social opportunities and constraints that derive from the embeddedness of economic agents within an accepted system of governance.
 
-* The development of the relational perspective embraces the notion of increasing returns to specialisation. We elaborate on the fundamental modelling tools and construction of the economic agent based on increasing returns to specialisation and the development of socio-economic roles.
+* The development of the relational perspective embraces the notion of increasing returns to specialisation. We elaborate on the fundamental modelling tools used to define the economic agent based on increasing returns to specialisation and the development of socio-economic roles.
 
 * We show that, given a population of economic agents and a set of socially recognised socio-economic roles, exchange networks form. The structure of the exchange networks depend on the institutions and governance systems present in the economy.
 
-* When developing the relational perspective we node a connection between the notion of a middleman and the notion of an entrepreneur. From this we develop methods to identify middlemen within topological structures and measures of their power.
+* When developing the relational perspective we elaborate on a connection between the notion of a middleman and the notion of an entrepreneur. From this we develop methods to identify middlemen within topological structures and measures of their power.
 
 * We provide analysis of unique empirical datasets where the exercise of power and entrepreneurial activity is present. These empirical datasets include the analysis of elite Florentine marriages and New York City company directors.
 
 ## 2 Compiling the monograph
 
-The latest PDF should have already been compiled and uploaded to the repository. If the latest PDF has not been compiled, or to make changes and compile yourself, you first must have a LaTeX executable installed on your system. The entire monograph can be generated and translated into a PDF format by compiling the TeX body file `00EntrepreneurshipSSE.tex` as normal. This body file pulls in all Parts and Chapters of the monograph, which are written as separate TeX files.
+The latest PDF should have already been compiled and uploaded to the repository. If the latest PDF has not been compiled, or to make changes and compile yourself, you must have a LaTeX executable installed on your system. 
+
+* For Windows I suggest using [MiKTex](http://miktex.org/download),
+* For Mac OSX I suggest using [MacTeX](https://tug.org/mactex/), and
+* For Ubuntu Linux I suggest using [TeX Live](https://help.ubuntu.com/community/LaTeX).
+
+The entire monograph can be generated into a PDF format by compiling the TeX body file `00EntrepreneurshipSSE.tex` as normal. This file pulls in all Parts and Chapters of the monograph, which are written as separate TeX files.
 
 ## 3 Contact
 
-Please contact [me](mailto:sims.owen@gmail.com) with regards any issues or queries.
+Please contact [me](mailto:sims.owen@gmail.com) with regards any issues or queries that you have.
